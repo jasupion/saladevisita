@@ -1,0 +1,1 @@
+Configurações necessarias para instalação do moodle e ambiente
