@@ -25,9 +25,9 @@ install_apache() {
   echo "Installing apache"
   sudo apt-get update
   sudo apt-get install -y apache2 libapache2-mod-php5 php-apc > /dev/null 2>&1
-  #if ! [ -L /var/www ]; then
-  #	  rm -rf /var/www/*
-  #fi
+  if ! [ -L /var/www/html ]; then
+  	  rm -rf /var/www/html/*
+  fi
  else
   echo "Apache estava instalado"
  fi
