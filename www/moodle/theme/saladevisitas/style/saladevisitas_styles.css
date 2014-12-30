@@ -1,0 +1,732 @@
+/*
+General Styles
+-----------------------*/
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color:#4b4b4b;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol,dl,input,textarea {
+    font-family: Helvetica,Arial,sans-serif;
+}
+.moodle-dialogue .chooserdialogue{
+    z-index: 12 !important;
+}
+.yui3-widget { z-index: 999999 !important;}
+
+a:link,
+a:visited {
+    color: #007EBA;
+    text-decoration: none;
+}
+a:hover, a:active {
+    color: #c30;
+    text-decoration: none;
+}
+hr {
+    border-bottom:1px dotted gray;
+    border-top:0px;
+}
+h2.headingblock {
+    border-bottom: 1px solid #ddd;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.loginerrors{
+    color:red;
+    font-weight: bold;
+}
+/*
+Page
+-----------------------*/
+#page {
+    font-size: 90%;
+    font-family: Helvetica,Arial,sans-serif
+}
+#page-content {
+    border-bottom: 1px solid #ddd;
+}
+#container{
+
+}
+
+/*===========Lista do topo===========*/
+/*.barra-superior ul {
+    list-style: none;
+    margin-top: 6px;
+    float: right;
+    margin-right: 9px;
+}
+
+.barra-superior ul li{
+    display: inline;
+    margin-right: 22px;
+}
+
+.barra-superior ul li a {
+    color: white;
+}
+
+.barra-superior ul li a:hover {
+    text-decoration: underline;
+}*/
+
+.header-menu{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.header-menu ul {
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -8px;
+    width: 100px;
+}
+
+.header-menu ul li{
+    display: inline;
+    margin-right: 22px;
+}
+
+.header-menu ul li a {
+    color: white;
+}
+
+.header-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.icon-top{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    
+    position: relative;
+    bottom: 8px;
+    left: 5px;
+}
+
+.txt-suporte{
+    position: relative;
+    top:-5px;
+}
+.icon-suporte{
+    background: url([[pix:theme|images/ico_suporte]]) no-repeat;
+}
+
+.login-div{
+    position: relative;
+    top: 3px;
+    text-align: right;
+    width: 90%;
+    color: #fff;
+}
+
+
+/*
+Header and Logo
+---------------------------*/
+#page-header {
+    height: 144px;
+    width: 100%;
+    margin:0 auto;
+    /*background: #fff;*/
+    /*background: url([[pix:theme|images/light3]]) no-repeat 0 -272px;*/
+    background: url([[pix:theme|images/topo]]) no-repeat center center;
+    position: relative;
+	/*margin-bottom: 10px;*/
+	/*left: 8px;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    bottom: 0px;
+    margin-bottom: 28px;
+    
+}
+
+
+.logo {
+    width: 237px;
+    height: 84px;
+    display: block;
+    margin:0;
+    top:25px;
+    float: left;
+    background: url([[pix:theme|images/logo]]) no-repeat;
+    z-index: 9;
+    position: relative;
+}
+
+.logo-fies{
+    background: url([[pix:theme|images/logo_fies]]) no-repeat;
+    width: 222px;
+    height: 84px;
+    float: right;
+    top:10px;
+    position: relative;
+    right: -100px;
+}
+
+.logo-name-first{
+    font-size: 2em;
+    color: #fff;
+    font-family: Arial;
+    font-style: italic;
+    position: relative;
+    top: 5px;
+    float: left;
+}
+
+.is-strong{
+    top: -5px;
+    font-weight: bolder;
+}
+
+.logo-mini {
+    width: 153px;
+    height: 28px;
+    display: block;
+    margin: 7px 20px;
+    float: left;
+    background: url([[pix:theme|images/miniLogo]]) no-repeat;
+}
+
+#flutuante-content{
+    margin-top: 6px;
+    position: relative;
+    left:-45px;
+}
+
+#flutuante-content .breadcrumb a,
+.breadcrumb a:link,
+.breadcrumb a:visited {
+    color: #18519A;
+    text-decoration: none;
+}
+.breadcrumb a:hover,
+.breadcrumb a:active { color: #18519A; text-decoration: underline;}
+
+#flutuante-user{
+    float: right;
+    position: relative;
+    right: 109px;
+    top: 4px;
+}
+#flutuante-user .logininfo a{
+    color: #25477c;
+}
+
+.langmenu {
+    float:right;
+    clear: right;
+    font-size:1em;
+    margin:0px;
+    text-align:right;
+    position: relative;
+    color: #0D455C;
+    /*top: 121px;*/
+    top:10px;
+/*    visibility: hidden;*/
+}
+.headermenu,.logininfo a{
+    color: #fff;
+}
+.headermenu .logininfo{
+    position: absolute;
+    top: 0;
+    width: 150px;
+    margin-top: 30px;
+}
+.headermenu a:hover{
+    color: #25477c;
+}
+.headermenu {
+    float: right;
+    font-size: 1em;
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    width: 236px;
+    height: 94px;
+    background-color: rgba(227, 135, 53, 0.88);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    bottom: 55px;
+    left: 10px;
+}
+
+}
+/*==============link support=================*/
+.link-support{
+    width: 56px;
+    height: 65px;
+    position: relative;
+    float: right;
+    left: 130px;
+}
+.icon-support{
+    width: 56px;
+    height: 65px;
+    background: url([[pix:theme|images/icon_suporte_full]]) no-repeat;
+}
+.moldura{
+    width: 74px;
+    height: 74px;
+    background: url([[pix:theme|images/moldura_user_13]]) no-repeat transparent;
+    padding-top: 6px;
+    margin-left: 147px;
+    margin-top: 9px;
+}
+
+.not-moldura{
+    padding-top: 6px;
+    margin-left: 147px;
+    margin-top: 9px;
+}
+.moldura img{ border:solid 1px #000;}
+/*
+Page Footer
+-----------------------*/
+.site-footer{
+    /*clear:both;*/
+    width: 100%;
+    height: 37px;
+    background-color: #dfdfdf;
+    bottom: 0;
+    position: absolute;
+}
+.site-footer .footer-right {
+    float: right;
+    text-align: right;
+    position: relative;
+    bottom: 29px;
+    left: -16px;
+    color: #0c501d;
+}
+.footer-right a,
+.footer-right a:hover{
+    color: #0c501d;
+}
+
+#footnote{
+    position: absolute;
+    left: 83px;
+    top: 13px;
+    color: #4b4b4b;
+}
+#page-footer {
+    background: #fff url([[pix:theme|core/h2grad]]) repeat-x left top;
+    height: auto;
+    clear:both;
+    float:left;
+    width:97%;
+    margin: 0 0 0 11px;
+    padding: 1%;
+    color: #4b4b4b;
+    border-top:1px solid #fff;
+    line-height: 2em;
+    font-size: 1em;
+}
+#page-footer a:link,
+#page-footer a:visited  {
+    color: #aaa;
+    text-decoration:none;
+}
+#page-footer a:hover,
+#page-footer a:active {
+    color: #c30;
+    text-decoration:none;
+}
+#page-footer .footer-left {
+    float: left;
+    text-align: left;
+    color: #999;
+}
+
+/*
+Navbar & Breadcrumb
+-----------------------*/
+.navbar {
+    /*background: url([[pix:theme|images/bg_breadcrumb]]) repeat-x;*/
+    background-color: #dfdfdf;
+    margin:0 0 7px;
+    padding:5px 10px 4px;
+    color:#2a7ba0;
+    /*border-bottom: 1px solid #d7d7d7;
+    border-top-left-radius:20px;
+    border-top-right-radius: 20px;*/
+    position: relative;
+    bottom: 28px;
+
+}
+.breadcrumb {
+    float:left;
+    color: #6992A5;
+}
+.navbutton {
+    text-align:right;
+    float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+.navbutton .singlebutton input {
+    border-width:1px;
+    border-style:outset;
+    border-color:#787878;
+    font-size: 85%;
+    cursor: pointer;
+    position: relative;
+    bottom: 4px;
+}
+.breadcrumb ul {
+    margin-top: 5px;
+    margin-left: 10px;
+    text-indent:0;
+    list-style:none;
+    position: relative;
+    bottom: 1px;
+}
+.breadcrumb li,
+.navbutton div,
+.navbutton form {
+    display:inline;
+}
+.logininfo
+.breadcrumb {
+    font-size: 1.5em;
+}
+.breadcrumb a,
+.breadcrumb a:link,
+.breadcrumb a:visited {
+    color: #2a7ba0;
+    text-decoration: none;
+}
+.breadcrumb a:hover,
+.breadcrumb a:active { text-decoration: underline;}
+.jsenabled .course_category_tree .controls {
+    visibility:visible;
+    float: right;
+}
+.category_label {
+    padding-left: 20px;
+}
+/*
+Collapse All - Expand All
+-------------------------*/
+div.controls .expandall,
+div.controls .collapseall {
+    font-size: .8em;
+    color: #008db0;
+    margin: 2px;
+    padding: 0;
+    float: right;
+    clear: both;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    border-bottom: 1px solid #008db0;
+}
+.redirectmessage,
+.continuebutton {
+    text-align: center;
+    font-size: 14pt;
+    color: #444;
+    padding-bottom: 10px;
+}
+/*
+General Box
+-----------------------*/
+.generalbox {
+    border:0 none;
+}
+/*
+Font Size
+-----------------------*/
+table {
+    font-size: 85%;
+}
+/*
+Button
+-----------------------*/
+select {
+    background-color: #0074CC;
+    color: #fff;
+}
+/*--->>Estilo buttons<<------*/
+input[type=submit],button{
+  border-bottom-left-radius:6px;
+  border-bottom-right-radius:6px;
+  border-top-left-radius:6px;
+  border-top-right-radius:6px;
+  font-size:14px;
+  color:white;
+  font-weight:normal;
+  margin-right:10px;
+  padding:4px 14px;
+  background-color:#0074CC;
+  background-image:-webkit-linear-gradient(top, #0088CC, #0055CC);
+  background-repeat:repeat no-repeat;
+  border-color:rgba(0, 0, 0, 0.0976563) rgba(0, 0, 0, 0.0976563) rgba(0, 0, 0, 0.246094);
+  cursor:pointer;
+  -webkit-box-shadow:rgba(255, 255, 255, 0.199219) 0 1px 0 inset, rgba(0, 0, 0, 0.046875) 0 1px 2px;
+}
+
+input[type=submit]:hover,button:hover{
+	background-color: #0044cc;
+	background-image:-webkit-linear-gradient(top, rgb(13, 76, 112), #0044cc);
+}
+ #searchform_search{ height: 27px; font-size: 15px; }
+ /*input[type=submit]{ max-width: 200px; }*/
+
+#loginbtn, input, button, select { cursor: pointer;}
+input#username, input#password,
+input[type="text"], input[type="password"], textarea {
+    background-color: white;
+    border: 2px inset threedface;
+    color: #4b4b4b;
+    width: auto;
+    cursor: default;
+}
+/*
+Coursebox Info & Summary
+------------------------*/
+.coursebox h3
+.coursebox .info,
+.coursebox .summary {
+    text-align: left;
+    width: 100%;
+    height: auto;
+}
+.coursebox .info {
+    float: left;
+}
+.coursebox .summary {
+    float: right;
+}
+.coursebox .summary p { margin: 5px 0 0;}
+.coursebox .info h3.name {
+    padding: 0;
+    margin: 5px 0 0;
+}
+/*
+Course Section Topic & Weekly
+-----------------------------*/
+.course-content ul.topics li.section,
+.course-content ul.weeks li.section {
+    border: 1px solid #DDDDDD;
+    list-style: none outside none;
+    margin: 5px 0 0;
+    padding: 0;
+}
+.course-content ul.topics li.section {
+  padding-top: 1em;
+}
+.path-course-view .headingblock {
+    display: none; /* hides topic items title or weekly itens title */
+    margin-bottom: 9px;
+}
+/*
+Login (Front Page)
+-----------------------*/
+.block_login
+{
+    margin: 0;
+    padding: 0;
+}
+.block_login .footer
+{
+    text-align: right;
+    clear: both
+}
+.block_login .loginform .c1 {
+    margin: 0.3em 15px;
+    text-align: left;
+}
+/* Theme Selector
+----------------------------*/
+#page-admin-theme-index .generalbox {
+    border: none;
+}
+.theme_screenshot {
+    float: left;
+    width: 300px;
+}
+.theme_screenshot img {
+    width: 275px;
+}
+.theme_screenshot h2 {
+    font-size: 2em;
+}
+.theme_screenshot h3 {
+    font-size: 0.9em;
+    margin: 1em 0 0;
+}
+.theme_screenshot p {
+    font-size: 0.9em;
+    margin: 0 0 1em;
+}
+.theme_description {
+    margin-left: 300px;
+}
+.theme_description h2 {
+    padding-top: 0.5em;
+}
+/*
+Tabs
+-----------------------*/
+.tabtree ul {
+    text-align:center;
+}
+.tabtree .tabrow0 {
+    width:100%;margin:1em 0px;
+}
+.tabtree .tabrow0 li {
+    margin-right:-4px;
+}
+.tabtree .tabrow0 li.here {
+    font-weight: bold;
+}
+.tabtree .tabrow0 li.here a {
+    position:relative;z-index:102;
+}
+.tabtree .tabrow0 li a {
+    background-image:url([[pix:theme|tab/left]]);
+    padding-left:14px;
+    padding-top:10px;
+    background-repeat:no-repeat;
+    padding-bottom:3px;
+    margin-bottom:-1px;
+}
+.tabtree .tabrow0 li a:hover {
+    background-image:url([[pix:theme|tab/left_hover]]);
+}
+.tabtree .tabrow0 li a span {
+    background-image:url([[pix:theme|tab/right]]);
+    background-repeat:no-repeat;
+    background-position:100% 0%;
+    padding-right:14px;
+    padding-top:10px;
+    padding-bottom:3px;
+}
+.tabtree .tabrow0 li a:hover span {
+    background-image:url([[pix:theme|tab/right_hover]]);
+}
+.tabtree .tabrow0 ul,
+.tabtree .tabrow0 div {
+    font-weight: normal;
+    background-image:url([[pix:theme|tab/tabrow1]]);
+    background-position:0% 50%;
+    border-top: 1px dotted #eee;
+    padding:0.25em 0px;
+    margin:0px;
+}
+.tabtree .tabrow0 li.here .empty {
+    display:block;
+    height:1px;
+    overflow:hidden;
+    padding:0px;
+    position:absolute;
+    width:100%;
+    bottom:-4px;
+}
+.tabtree .tabrow1 li a,
+.tabtree .tabrow1 li a:hover,
+.tabtree .tabrow1 li a span,
+.tabtree .tabrow1 li a:hover span {
+    background-image:none !important;
+}
+.tabtree a.nolink,
+.tabtree .here ul a.nolink,
+.tabtree a.nolink:hover,
+.tabtree .here ul a.nolink:hover {
+    color: #888;
+    text-decoration: none;
+}
+.tabtree .here a.nolink,
+.tabtree .here ul .here a.nolink,
+.tabtree .here a.nolink:hover,
+.tabtree .here ul .here a.nolink:hover {
+    color: black;text-decoration: none;
+}
+/*
+tab styles for ie6 & ie7
+-----------------------*/
+.ie7 .tabtree .tabrow0 li {
+    margin-left: 0;
+}
+.ie7 .tabtree .tabrow0 li.first {
+    margin-right: -4px;
+}
+.ie7 .tabtree .tabrow0 li.onerow {
+    margin-right: 0;
+}
+.ie7 .tabtree .tabrow0 a {
+    display: inline-block;
+    padding: 8px 0 0.35em 13px;
+    line-height: 1.5em;
+}
+.ie7 .tabtree .tabrow0 a span {
+    padding: 10px 1em 10px 0;
+}
+.ie7 .tabtree .tabrow0 div {
+    top: 2.6em;padding: 0.2em 0;
+}
+.ie7 .tabtree .tabrow0 div.empty {
+    margin-right: 0;
+}
+.ie7.mod-quiz div.tabtree a span img.iconsmall {
+    margin: 0;
+    vertical-align: baseline;
+    position: relative;
+    top: 2px;
+}
+.ie6 .tabtree {
+    height: 100%;
+}
+.ie6 .tabtree .tabrow0 {
+    padding-top: 10px;
+}
+.ie6 .tabtree .tabrow0 li {
+    margin-left: 0;
+}
+.ie6 .tabtree .tabrow0 li.first {
+    margin-left: -4px;
+    margin-right: -4px;
+}
+.ie6 .tabtree .tabrow0 li.last a {
+    margin-right: 0;
+}
+.ie6 .tabtree .tabrow0 li.onerow {
+    margin-right: 0;
+}
+.ie6 .tabtree .tabrow0 a {
+    padding: 0 0 0 13px;
+}
+.ie6 .tabtree .tabrow0 a span {
+    padding: 12px 1em 4px 0;
+}
+.ie6 .tabtree .tabrow0 div {
+    top: 3.5em;
+    padding: 0.2em 0;
+}
+.yui-skin-sam .yui-panel-container {
+    z-index: 999999!important;
+}
+
+
+
