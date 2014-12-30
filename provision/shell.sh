@@ -239,8 +239,8 @@ install_moodle() {
 		--dbpass="${SQLPASSWORD}" \
 		--adminuser="admin" \
 		--adminpass="C1m@t3c!" \
-		--fullname="TestSite" \
-		--shortname="test" \
+		--fullname="Sala de Visitas" \
+		--shortname="Sala de Visitas" \
 		--agree-license
 	chmod 644 /var/www/moodle/config.php
 	sudo mkdir -p ${MOODLE_DATA_DIR}/geoip
