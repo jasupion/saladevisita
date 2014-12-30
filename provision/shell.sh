@@ -25,9 +25,9 @@ install_apache() {
   echo "Installing apache"
   sudo apt-get update
   sudo apt-get install -y apache2 libapache2-mod-php5 php-apc > /dev/null 2>&1
-  if ! [ -L /var/www ]; then
-	  rm -rf /var/www/*
-  fi
+  #if ! [ -L /var/www ]; then
+  #	  rm -rf /var/www/*
+  #fi
  else
   echo "Apache estava instalado"
  fi
@@ -249,14 +249,14 @@ install_moodle() {
 	sudo rm /tmp/pt_br.zip /tmp/geoip.dat.gz /tmp/moodle.tgz /vagrant/moodle.tgz
 }
 
-#install_tools_linux
-#install_php
+install_tools_linux
+install_nodejs_express_nodemon
+install_php
 configure_php
-#install_apache
-#configure_apache
-#install_mysql
-#mysql_remote_external
-#install_git
-#install_nodejs_express_nodemon
-#install_gulp
-#install_moodle
+install_apache
+configure_apache
+install_mysql
+mysql_remote_external
+install_git
+install_gulp
+install_moodle
