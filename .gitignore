@@ -8,6 +8,8 @@ Desktop.ini
 #Ignore vagrant
 /.vagrant
 
+node_modules/
+
 #ignore moodle
 moodledata/
 !/www/moodle/theme/saladevisitas/
