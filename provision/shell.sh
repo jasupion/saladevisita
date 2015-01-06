@@ -163,6 +163,7 @@ install_nodejs_express_nodemon() {
 		sudo apt-add-repository ppa:chris-lea/node.js -y
 		sudo apt-get update
 
+		curl -sL https://deb.nodesource.com/setup | sudo bash -
 		sudo apt-get install nodejs -y
 		sudo apt-get install npm -y
 
