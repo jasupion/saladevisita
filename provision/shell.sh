@@ -4,7 +4,7 @@
 MOODLE_ROOT=/var/www
 MOODLE_PATH=${MOODLE_ROOT}/moodle
 MOODLE_DATA_DIR=/var/moodledata
-MOODLE_WEBROOT="http://localhost:8080/moodle"
+MOODLE_WEBROOT="http://localhost/moodle"
 MOODLE_PASSWORD="C1m@t3c!"
 
 # DB settings
