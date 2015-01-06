@@ -13,18 +13,10 @@ var shell = require('gulp-shell');
 // load plugins
 var $ = require('gulp-load-plugins')();
 
-var mooderoot = path.dirname(path.dirname(__dirname)),
-configfile = '',
-decachephp = '';
-
-configfile = path.join(moodleroot, 'config.php');
-
-decachephp += 'define(\'CLI_SCRIPT\', true);';
-decachephp += 'require(\'' + configfile  + '\');';
-decachephp += 'theme_reset_all_caches();';
+var configfile = path.join( path.dirname(path.dirname(__dirname)), 'config.php');
 
 gulp.task('cmd', shell.task([
-  'php -r "' + decachephp + '"';
+  'php -r define(\'CLI_SCRIPT\', true); require(\'' + configfile  + '\'); theme_reset_all_caches();'
 ]));
 
 gulp.task('less', function() {
@@ -39,7 +31,7 @@ gulp.task('browser-sync', function() {
 	browserSync({
 		notify: true,
 		port: 3000,
-        proxy: "localhost:8080/moodle/"
+        proxy: "localhost/moodle"
 	});
 });
 
@@ -60,7 +52,7 @@ gulp.task('watch', function() {
 
 
 gulp.task('serve', function() {
-    runSequence('clean', ['less', 'browser-sync']);
+    //runSequence('clean', ['less', 'browser-sync']);
     runSequence('less', 'browser-sync','cmd','watch');
 	//runSequence('copy', 'browser-sync','watch');
 	gulp.watch(['less/**/*.less'], reload);
