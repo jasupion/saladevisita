@@ -33,9 +33,10 @@ echo $OUTPUT->doctype() ?>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
-<body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
+<body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>" class="yui3-skin-sam">
 
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 <div id="topo-flutuante" class="flutuante" style="display:none;">
@@ -61,6 +62,7 @@ echo $OUTPUT->doctype() ?>
               }
               echo $PAGE->headingmenu
             ?>
+            <a href="#" id="openButton"><i class="fa fa-info-circle"></i></a>
           </div>
           <!--<ul>
             <li><a href="http://suporte.aticenter.com.br" target="_blank"><span class="txt-suporte">Suporte</span><span class="icon-top icon-suporte">&nbsp;</span></a></li>
@@ -147,6 +149,70 @@ echo $OUTPUT->doctype() ?>
         <!-- END OF FOOTER -->
     </div><!-- END OF page-content -->
 </div>
+
+<div id="panelContent" class="yui3-widget-loading">
+    <div class="yui3-widget-hd">
+        Atenção!
+    </div>
+    <div class="yui3-widget-bd">
+        <p>
+           O acesso a esse ambiente é restrito a colaboradores do SENAI que atuam no desenvolvimento e execução dos cursos 
+           a distância. Para esclarecimentos, procure o interlocutor de educação a distância do Departamento Regional 
+           do SENAI do seu Estado. 
+        </p>
+    </div>
+</div>
+
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
+<script type="text/javascript">
+  YUI().use('transition','panel', function (Y) {
+        var openBtn = Y.one('#openButton'),
+            panel, bb;
+
+        function showModal() {
+          panel.show();
+          bb.transition({
+              duration: 0.5,
+              top     : '80px'
+          });
+        }
+
+        function hidePanel() {
+            bb.transition({
+                duration: 0.5,
+                top     : '-300px'
+            }, function () {
+                panel.hide();
+            });
+        }
+
+        panel = new Y.Panel({
+          srcNode: '#panelContent',
+          width  : 330,
+          //xy     : [300, -300],
+          centered : true,
+          zIndex : 5,
+          modal  : true,
+          visible: false,
+          render : true,
+          buttons: [
+              {
+                  value  : 'Fechar',
+                  section: 'footer',
+                  action : function (e) {
+                      e.preventDefault();
+                      hidePanel();
+                  }
+              }
+          ]
+        });
+
+        bb = panel.get('boundingBox');
+
+        openBtn.on('click', function (e) {
+          showModal();
+        })
+  });
+</script>
 </body>
 </html>

@@ -1,5 +1,7 @@
 <?php
 
+$THEME->doctype = 'html5';
+
 $THEME->name = 'saladevisitas';
 
 $THEME->parents = array('base');
@@ -16,11 +18,21 @@ $THEME->parents = array('base');
 );*/
 
 $THEME->sheets = array(
+    //'font-awesome',
     'moodle'
 );
 
 // Add the required JavaScript to the page
+/*$THEME->javascripts = array(
+    'jquery-1.11.2.min',
+    'custom',
+    'jquery.stellar.min'
+);*/
+
 $THEME->javascripts = array(
+);
+
+$THEME->javascripts_footer = array(
     'jquery-1.11.2.min',
     'custom',
     'jquery.stellar.min'
@@ -143,3 +155,5 @@ $THEME->layouts = array(
 $THEME->enable_dock = true;
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
+
+//$THEME->csspostprocess = 'theme_essential_set_fontwww';

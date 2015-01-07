@@ -1,5 +1,16 @@
 <?php
 
+function theme_essential_set_fontwww($css) {
+    global $CFG;
+    $fontwww = preg_replace("(https?:)", "", $CFG->wwwroot . '/theme/saladevisitas/fonts/');
+    $tag = '[[setting:fontwww]]';
+    
+    $css = str_replace($tag, $fontwww, $css);
+   
+    return $css;
+}
+
+
 function saladevisitas_process_css($css, $theme) {
 
     // Set the background image for the logo
@@ -8,7 +19,7 @@ function saladevisitas_process_css($css, $theme) {
     } else {
         $logo = null;
     }
-    $css = afterburner_set_logo($css, $logo);
+    $css = saladevisitas_set_logo($css, $logo);
 
     // Set custom CSS
     if (!empty($theme->settings->customcss)) {
