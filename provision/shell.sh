@@ -17,6 +17,7 @@ UPLOAD_MAX_FILESIZE="128M"
 POST_MAX_SIZE="128M"
 
 install_tools_linux() {
+	sudo apt-get update
 	apt-get -y install unzip
 }
 
@@ -75,6 +76,7 @@ configure_apache() {
 install_php() {
 	if [ ! -f /var/log/php ]; then
 		echo "Updating PHP repository"
+		apt-get update
 		apt-get install python-software-properties build-essential -y 
 		add-apt-repository ppa:ondrej/php5 -y
 		apt-get update
@@ -86,7 +88,7 @@ install_php() {
 		apt-get install curl php5-curl php5-gd php5-mcrypt php5-mysql -y
 
 		echo "Installing PHP extensions for moodle"
-		apt-get install graphviz aspell php5-pspell php5-intl php5-xmlrpc php5-ldap
+		apt-get install graphviz aspell php5-pspell php5-intl php5-xmlrpc php5-ldap -y
 
 		touch /var/log/php # registra arquivo para informar que já foi instalado
 	else
@@ -159,11 +161,11 @@ install_nodejs_express_nodemon() {
 		echo "Installing Node.js"
 
 		# Add Node.js repo.
+		sudo apt-get update
 		sudo apt-get install python-software-properties -y
 		sudo apt-add-repository ppa:chris-lea/node.js -y
 		sudo apt-get update
 
-		curl -sL https://deb.nodesource.com/setup | sudo bash -
 		sudo apt-get install nodejs -y
 		sudo apt-get install npm -y
 
@@ -199,21 +201,19 @@ install_moodle() {
    		wget -O /vagrant/moodle.tgz http://softlayer-dal.dl.sourceforge.net/project/moodle/Moodle/stable25/moodle-2.5.9.tgz
   	fi
 
-  	#Cria banco moodle
+  	Cria banco moodle
   	echo "CREATE DATABASE moodle" | mysql -u$SQLUSER -p$SQLPASSWORD
 
    	echo "Extraindo o MOODLE"
    	tar -zxvf /vagrant/moodle.tgz -C $MOODLE_ROOT
 
-   	#Configura o moodle
+   	Configura o moodle
    	chown -R root $MOODLE_PATH
    	chmod -R 0755 $MOODLE_PATH
    	find $MOODLE_PATH -type f -exec chmod 0644 {} \;
 
    	mkdir $MOODLE_DATA_DIR
    	chmod 777 $MOODLE_DATA_DIR
-
- 	sudo mkdir "${MOODLE_DATA_DIR}"
 	sudo mkdir "${MOODLE_DATA_DIR}/lang"
 	sudo mkdir "${MOODLE_DATA_DIR}/geoip"
 
@@ -222,32 +222,32 @@ install_moodle() {
 	echo "Instalando o GeoLiteCity.dat.gz"
 	sudo -u www-data gzip -cd /tmp/geoip.dat.gz > "${MOODLE_DATA_DIR}/geoip/GeoLiteCity.dat"
 
-	echo "Baixando o pt_BR"
-	wget -O "/tmp/pt_br.zip" "https://download.moodle.org/download.php/direct/langpack/2.5/pt_br.zip"
-	echo "Instalando o pt_BR"
-	sudo -u www-data unzip "/tmp/pt_br.zip" -d "${MOODLE_DATA_DIR}/lang"
+	#echo "Baixando o pt_BR"
+	#wget -O "/tmp/pt_br.zip" "https://download.moodle.org/download.php/direct/langpack/2.5/pt_br.zip"
+	#echo "Instalando o pt_BR"
+	#sudo -u www-data unzip "/tmp/pt_br.zip" -d "${MOODLE_DATA_DIR}/lang"
 	sudo chown -R www-data:www-data "${MOODLE_DATA_DIR}"
 	sudo chmod -R 777 "${MOODLE_DATA_DIR}"
 
 	echo "Instalando MOODLE"
 	sudo -u www-data /usr/bin/php /var/www/moodle/admin/cli/install.php \
-		--non-interactive \
-		--lang="pt_br" \
-		--wwwroot="${MOODLE_WEBROOT}" \
-		--dataroot="${MOODLE_DATA_DIR}" \
-		--dbtype="mysqli" \
-		--dbuser="${SQLUSER}" \
-		--dbpass="${SQLPASSWORD}" \
-		--adminuser="admin" \
-		--adminpass="C1m@t3c!" \
-		--fullname="Sala de Visitas" \
-		--shortname="Sala de Visitas" \
-		--agree-license
+	 	--non-interactive \
+	 	--lang="pt_br" \
+	 	--wwwroot="${MOODLE_WEBROOT}" \
+	 	--dataroot="${MOODLE_DATA_DIR}" \
+	 	--dbtype="mysqli" \
+	 	--dbuser="${SQLUSER}" \
+	 	--dbpass="${SQLPASSWORD}" \
+	 	--adminuser="admin" \
+	 	--adminpass="C1m@t3c!" \
+	 	--fullname="Sala de Visitas" \
+	 	--shortname="Sala de Visitas" \
+	 	--agree-license
 	chmod 644 /var/www/moodle/config.php
 	sudo mkdir -p ${MOODLE_DATA_DIR}/geoip
 
  	echo "Removendo o tmp"
-	sudo rm /tmp/pt_br.zip /tmp/geoip.dat.gz /tmp/moodle.tgz /vagrant/moodle.tgz
+	sudo rm /tmp/pt_br.zip /tmp/geoip.dat.gz /vagrant/moodle.tgz
 }
 
 install_tools_linux
