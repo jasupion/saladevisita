@@ -22,7 +22,6 @@ gulp.task('cmd', shell.task([
 gulp.task('less', function() {
 	gulp.src('./less/moodle.less')
 		.pipe(less({compress: true}))
-		//.pipe(rename('suitheme.css'))
 		.pipe(gulp.dest('./style'))
 		.pipe(reload({stream:true}))
 });
@@ -44,7 +43,7 @@ gulp.task('browser-sync', function() {
 *
 ********************/
 gulp.task('watch', function() {
-	gulp.watch(['less/**/*.less'], ['cmd']);
+	gulp.watch(['less/**/*.less'], ['cmd','less']);
     gulp.watch(['layout/**/*.html'], ['cmd']);
 	gulp.watch(['layout/**/*.php'], ['cmd']);
 	gulp.watch(['javascript/**/*.js'], ['cmd']);

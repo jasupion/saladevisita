@@ -62,9 +62,9 @@ echo $OUTPUT->doctype() ?>
               echo $PAGE->headingmenu
             ?>
           </div>
-          <ul>
+          <!--<ul>
             <li><a href="http://suporte.aticenter.com.br" target="_blank"><span class="txt-suporte">Suporte</span><span class="icon-top icon-suporte">&nbsp;</span></a></li>
-          </ul>
+          </ul>-->
         </div>
         <?php if ($hasheading) { ?>
          <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>

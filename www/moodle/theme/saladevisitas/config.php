@@ -4,15 +4,19 @@ $THEME->name = 'saladevisitas';
 
 $THEME->parents = array('base');
 
-$THEME->sheets = array(
-    'saladevisitas_layout',   /** Must come first: Page layout **/
-    'saladevisitas_styles',   /** Must come second: default styles **/
+/*$THEME->sheets = array(
+    'saladevisitas_layout',  
+    'saladevisitas_styles',  
     'saladevisitas_menu',
     'saladevisitas_blocks',
     'saladevisitas_mod',
     'saladevisitas_calendar',
     'saladevisitas_dock',
     'rtl'
+);*/
+
+$THEME->sheets = array(
+    'moodle'
 );
 
 // Add the required JavaScript to the page
