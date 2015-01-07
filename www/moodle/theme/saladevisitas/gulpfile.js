@@ -13,16 +13,15 @@ var shell = require('gulp-shell');
 // load plugins
 var $ = require('gulp-load-plugins')();
 
-var configfile = path.join( path.dirname(path.dirname(__dirname)), 'config.php');
+//var configfile = path.join( path.dirname(path.dirname(__dirname)), 'config.php');
 
 gulp.task('cmd', shell.task([
-  'php -r define(\'CLI_SCRIPT\', true); require(\'' + configfile  + '\'); theme_reset_all_caches();'
+  'php -r "define(\'CLI_SCRIPT\', true); require(\'/var/www/moodle/config.php\'); theme_reset_all_caches();"'
 ]));
 
 gulp.task('less', function() {
 	gulp.src('./less/moodle.less')
 		.pipe(less({compress: true}))
-		//.pipe(rename('suitheme.css'))
 		.pipe(gulp.dest('./style'))
 		.pipe(reload({stream:true}))
 });
@@ -44,7 +43,7 @@ gulp.task('browser-sync', function() {
 *
 ********************/
 gulp.task('watch', function() {
-	gulp.watch(['less/**/*.less'], ['cmd']);
+	gulp.watch(['less/**/*.less'], ['cmd','less']);
     gulp.watch(['layout/**/*.html'], ['cmd']);
 	gulp.watch(['layout/**/*.php'], ['cmd']);
 	gulp.watch(['javascript/**/*.js'], ['cmd']);
