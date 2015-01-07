@@ -69,7 +69,7 @@ echo $OUTPUT->doctype() ?>
         <?php if ($hasheading) { ?>
          <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
          <div>
-           <p><h2 class="logo-name-first">Educação a Distância</h2></p>
+           <p><h2 class="logo-name-first">Sala de Visitas</h2></p>
          </div>
          <div class="logo-fies"></div>
         <?php } ?>
