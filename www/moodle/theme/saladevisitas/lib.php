@@ -1,8 +1,11 @@
 <?php
-
+//função criada para fazer o atalho para enxergar a pasta fonts pelo servidor
 function theme_essential_set_fontwww($css) {
     global $CFG;
-    $fontwww = preg_replace("(https?:)", "", $CFG->wwwroot . '/theme/saladevisitas/fonts/');
+    //$fontwww = preg_replace("(https?:)", "", $CFG->wwwroot . '/theme/saladevisitas/fonts/');
+    //$fontwww = $CFG->wwwroot . '/theme/saladevisitas/fonts/';
+    $str = explode("/",$CFG->wwwroot);
+    $fontwww = ($str[3] == 'moodle')? '/moodle/theme/saladevisitas/fonts/' : '/theme/saladevisitas/fonts/';
     $tag = '[[setting:fontwww]]';
     
     $css = str_replace($tag, $fontwww, $css);

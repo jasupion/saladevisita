@@ -1,4 +1,4 @@
-
+//comentario
 $(document).ready(function() {
     $(".breadcrumb").clone().appendTo("#flutuante-content"); 
     $(".logininfo:first").clone().appendTo("#flutuante-user");

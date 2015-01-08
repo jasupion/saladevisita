@@ -18,7 +18,7 @@ $THEME->parents = array('base');
 );*/
 
 $THEME->sheets = array(
-    //'font-awesome',
+    'font-awesome',
     'moodle'
 );
 
@@ -30,12 +30,14 @@ $THEME->sheets = array(
 );*/
 
 $THEME->javascripts = array(
+    'lib/modernizr-2.6.2.min'
 );
 
 $THEME->javascripts_footer = array(
-    'jquery-1.11.2.min',
+    'lib/jquery-1.11.2.min',
+    'lib/bootstrap.min',
     'custom',
-    'jquery.stellar.min'
+    'lib/jquery.stellar.min'
 );
 
 $THEME->parents_exclude_sheets = array(
@@ -156,4 +158,4 @@ $THEME->enable_dock = true;
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 
-//$THEME->csspostprocess = 'theme_essential_set_fontwww';
+$THEME->csspostprocess = 'theme_essential_set_fontwww';
