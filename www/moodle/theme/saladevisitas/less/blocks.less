@@ -1,0 +1,422 @@
+.block {    
+    // border-bottom:1px solid #5CC1ED;
+    // border-top:1px solid #5CC1ED;
+    // border-left:1px solid #5CC1ED;
+    // border-right:1px solid #5CC1ED;
+    border:none;
+    // background: #EDF8FC; 
+    // -moz-border-radius: 10px;
+    // -webkit-border-radius: 10px;
+    // border-radius: 10px;    
+}
+
+.content {
+   padding: 0px;	
+}
+
+.block .header .block_action {//esconder bloco 
+     display: none;
+    float:right;
+    margin:0 4px;
+    vertical-align:top;
+}
+.block .header .block_action input {
+    margin-right:2px;
+}
+
+
+.block.hidden .content {
+    display: none;
+}
+
+.block .content .userpicture {
+    width:16px;height:16px;
+    margin-right:4px;
+}
+
+.block .content .list li.listentry {
+    clear:both;
+}
+.block .content .list .c0 {
+    display:inline;
+}
+.block .content .list .c1 {
+    margin-left:5px;
+    display:inline;
+}
+.block .footer {
+    margin-bottom: 4px;
+}
+.block .blockannotation {
+    font-size:0.75em;
+    margin: -1em 0 1em;
+}
+.block.beingmoved {
+    border-width: 2px;
+    border-style: dashed;
+}
+.blockmovetarget {
+    display: block;
+    height: 1em;
+    margin-bottom: 1em;
+    border-width: 2px;
+    border-style: dashed;
+}
+.block-region .invisible {
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.block .block-hider-show,
+.block .block-hider-hide {
+    cursor:pointer;
+}
+.block .block-hider-show,
+.block.hidden .block-hider-hide {
+    display:none;
+}
+.block.hidden .block-hider-show {
+    display:inline;
+}
+.block-region {
+    float: left;
+    padding: 0;
+    font-size: 12px;
+}
+.block-region ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.block-region li {
+    padding: 0 0 20px 0;
+}
+.block-region li ul {
+}
+.block-region li li {
+    margin: 0 20px 0 10px;
+    padding: 8px 0px;
+}
+.block .header {
+    border:none;
+    padding: 6px 0 4px;
+    width: 100%;
+}
+.block .header div.commands {
+    margin-left: 10px;
+}
+
+/*---------------------------*/
+
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.menu-anchor {
+	width: 40px;
+	height: 32px;
+	// display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	text-indent: -9999px;
+	overflow: hidden;
+	cursor: pointer;
+	background: #FFF;
+    z-index: 2;
+    float: left;
+	right: 100px;
+	top: 10px;
+}
+
+.menu-anchor:before {/*desenhando o sandwich*/
+	content: "";
+	display: block;
+	margin: 7px auto;
+	width: 70%;
+	height: 0.25em;
+	background: #5180a3;
+	box-shadow: 0 .45em 0 0 #5180a3, 0 .9em 0 0 #5180a3;
+}
+
+.menu-active .menu-anchor {background: #fff}
+
+.nav {
+	position: fixed;
+	top: 0;
+	width: 220px;
+	height: 100%;
+	padding-top: 10px;
+	background: #fff;
+}
+
+.menu-active .nav {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	transform: translateX(0);
+}
+
+
+.nav li a {
+	display: block;
+	border-bottom: 1px solid rgba(255,255,255,.3);
+	margin: 0 10px;
+	padding: 10px;
+	color: #000;
+	text-decoration: none;
+}
+
+.nav li a:hover {
+	background: #FFF;
+	color: #5180a3;
+}
+
+
+/* 	Aqui você esconde o menu para fora da tela  O valor é exatamente a largura da sidebar */
+.nav {
+	-webkit-transform: translateX(-220px);
+	-moz-transform: translateX(-220px);
+	-ms-transform: translateX(-220px);
+	transform: translateX(-220px);
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	-ms-transition: all .25s linear;
+	transition: all .25s linear;
+}
+
+
+/* Custom Menu -------------------------- */
+
+#custommenu {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    clear:both;
+    height: 30px;
+    background: #888;
+    margin:0;
+}
+#custommenu ul li {
+    border-right: 1px solid #777;
+    border-left: 1px solid #999
+}
+
+
+/* Dropdown Menu - CSS from DeCaf Theme by Lei Zhang -------------------------------------------------*/
+ul.dropdown span.customitem {
+    padding:0;
+    border:0;
+    width: 100%;
+}
+ul.dropdown span.customitem {
+    padding:0;
+    width: 100%;
+}
+ul.dropdown li a,
+ul.dropdown span.customitem a {
+    padding:6px 20px;
+}
+ul.dropdown span.customitem a:hover {
+    border: 0;
+}
+#custommenu ul.dropdown ul {
+    padding:0;width:185px;
+}
+#custommenu ul.dropdown ul a {
+    padding:4px 0px 4px 18px;
+}
+#custommenu ul.dropdown > li span a {
+    height:16px;
+}
+ul.dropdown,
+ul.dropdown li,
+ul.dropdown ul {
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+ul.dropdown {
+    position:relative;
+    top:0px;
+    z-index:597;
+    float:left;
+    font:13px "Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+ul.dropdown li {
+    float:left;
+    line-height:1.3em;
+    vertical-align:middle;
+    background-color:transparent;
+    color:#fff;
+    zoom:1 !important;
+}
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+    position:relative;
+    z-index:599;
+    cursor:default;
+}
+ul.dropdown ul {
+    visibility:hidden;
+    position:absolute;
+    top:100%;z-index:598;
+    left:auto;
+    right:0;
+    margin-top: -1px;
+    font:100% "Trebuchet MS",Arial,Helvetica,sans-serif;
+}
+ul.dropdown ul li {
+    float:none;
+    background-color: #34637f;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #477C9B #34637f #295770;
+    padding:0;
+}
+ul.dropdown ul ul {
+    top:0;
+    right:auto;
+    left:100%;
+    margin-top:0;
+    border-top:none;
+    border-left:none;
+    font-weight:400;
+}
+ul.dropdown li:hover > ul {
+    visibility:visible;
+}
+ul.dropdown span,
+ul.dropdown span a,
+ul.dropdown li.clickable-with-children > a {
+  background-color: #34637f;
+    width:145px;
+    padding:2px 6px 4px 20px;
+    color: #fff;
+}
+ul.dropdown ul span,
+ul.dropdown ul span a,
+ul.dropdown ul li.clickable-with-children > a {
+    background: #34637f url([[pix:theme|menu/nav-arrow-right]]);
+    background-position:100% 50%;
+    background-repeat:no-repeat;
+    color: #fff;
+}
+ul.dropdown ul ul span,
+ul.dropdown ul ul span a,
+ul.dropdown ul ul li.clickable-with-children > a {
+    background-image: #34637f url([[pix:theme|menu/nav-arrow-right]]);
+    background-position:100% 50%;
+    background-repeat:no-repeat;
+    color: #fff;
+}
+ul.dropdown a:link, ul.dropdown a:visited {
+    color: white;
+    text-decoration: none;
+}
+ul.dropdown a:hover {
+    border:0;
+    background-color: #fff;
+    color: #036;
+}
+ul.dropdown ul ul li {
+    background-color: #34637f;
+}
+ul.dropdown ul ul ul li {
+    background-color: #34637f;
+}
+ul.dropdown li a,
+ul.dropdown span,
+ul.dropdown span a {
+    border: none;
+    background-color: transparent;
+}
+ul.dropdown ul li a,
+ul.dropdown ul span,
+ul.dropdown ul span a {
+    border: 0;
+}
+ul.dropdown ul ul li a,
+ul.dropdown ul ul span,
+ul.dropdown ul ul span a {
+    border:0
+}
+ul.dropdown ul ul ul li a,
+ul.dropdown ul ul ul span,
+ul.dropdown ul ul ul span a {
+    border:0;
+}
+ul.dropdown a,ul.dropdown span{
+    display:block;
+}
+ul.dropdown ul a {
+    width:166px;
+    padding:2px 0 4px 5px;
+}
+ul.dropdown ul a.open:hover {
+    background-color: #fff;
+    color:#036;
+}
+ul.dropdown ul li:hover > span,
+ul.dropdown ul li:hover > span a {
+    background-color:#fff;
+    background-image:url([[pix:theme|menu/ab-arrowover]]);
+    color: #036;
+}
+ul.dropdown li.clickable-with-children:hover > a {
+    background-image:url([[pix:theme|menu/ab-arrowover]]);
+}
+ul.dropdown *.open,
+ul.dropdown li:hover > span,
+ul.dropdown li:hover > span a {
+    background-color:#fff;
+    color: #036;
+}
+ul.dropdown ul ul *.open,
+ul.dropdown ul ul li:hover > span,
+ul.dropdown ul ul li:hover > span a {
+    background-color:#fff;
+    background-image:url([[pix:theme|menu/ab-arrowover]]);
+    color:#036;
+}
+
+
+.wrapper {
+        display: flex;
+        min-height: 100%;   
+}
+.custommenu-checkbox {
+        position: absolute;
+        opacity: 0;
+}
+.custommenu-label {
+        position: absolute;
+        top: 32px;
+        left: 32px;     
+        z-index: 2;
+        cursor: pointer;
+}
+.content {
+    flex: 1;
+    padding: 80px 30px;
+    background: #eee;
+    color: blue;
+    // box-shadow: 0 0 5px black;
+    transition: all .5s;
+}
+.sidebar {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    background: blue;
+    color: #eee;
+    transition: all .5s;
+}
+.custommenu-checkbox:checked ~ .sidebar {
+    position: absolute;
+    z-index: 1;
+    width: auto;
+    height: auto;
+    padding-top: 6.5em;
+}

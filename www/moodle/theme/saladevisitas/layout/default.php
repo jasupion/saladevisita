@@ -30,10 +30,12 @@
                </div>
 
                 <?php if ($hassidepre) { ?>
-                <div id="region-pre" class="block-region">
-                   <div class="region-content">
-                        <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
-                   </div>
+                <div id="region-pre" class="block-region">                    
+                      <div class="nav">
+                         <div class="region-content">
+                              <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
+                         </div>
+                      </div>                   
                 </div>
                 <?php } ?>
 

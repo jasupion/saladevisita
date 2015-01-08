@@ -57,6 +57,7 @@ echo $OUTPUT->doctype() ?>
 <?php if ($hasheading || $hasnavbar) { ?>
     <header id="page-header" >
         <div class="container">
+        <div class="menu-anchor"></div>
           <div class="header-menu">
             <div class="login-div">
               <?php echo $src; ?>
