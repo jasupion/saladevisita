@@ -55,31 +55,35 @@ echo $OUTPUT->doctype() ?>
 </div>-->
 
 <?php if ($hasheading || $hasnavbar) { ?>
-    <div id="page-header" >
-        <div class="header-menu">
-          <div class="login-div">
-            <?php echo $src; ?>
-            <?php
-              if ($haslogininfo) {
-                  echo $OUTPUT->login_info();
-              }
-              echo $PAGE->headingmenu
-            ?>
-            <a href="#" id="openButton">
-              <i class="fa fa-info-circle" id="tool" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"></i>
-            </a>
+    <header id="page-header" >
+        <div class="container">
+          <div class="header-menu">
+            <div class="login-div">
+              <?php echo $src; ?>
+              <?php
+                if ($haslogininfo) {
+                    echo $OUTPUT->login_info();
+                }
+                echo $PAGE->headingmenu
+              ?>
+              <a href="#" id="openButton">
+                <i class="fa fa-info-circle" id="tool" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"></i>
+              </a>
+            </div>
+            <!--<ul>
+              <li><a href="http://suporte.aticenter.com.br" target="_blank"><span class="txt-suporte">Suporte</span><span class="icon-top icon-suporte">&nbsp;</span></a></li>
+            </ul>-->
           </div>
-          <!--<ul>
-            <li><a href="http://suporte.aticenter.com.br" target="_blank"><span class="txt-suporte">Suporte</span><span class="icon-top icon-suporte">&nbsp;</span></a></li>
-          </ul>-->
+          <?php if ($hasheading) { ?>
+           <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>">
+             <img class="img-logo" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/> 
+           </a>
+           <div class="logo-senai">
+             <img src="<?php echo $OUTPUT->pix_url('images/logo_senai_dn', 'theme'); ?>">
+           </div>
+          <?php } ?>
         </div>
-        <?php if ($hasheading) { ?>
-         <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
-         <div>
-           <p><h2 class="logo-name-first">Sala de Visitas</h2></p>
-         </div>
-         <div class="logo-fies"></div>
-        <?php } ?>
-    </div>
+        
+    </header>
 <?php } ?>
 <!-- END OF HEADER -->

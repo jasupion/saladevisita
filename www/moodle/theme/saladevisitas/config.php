@@ -22,13 +22,6 @@ $THEME->sheets = array(
     'moodle'
 );
 
-// Add the required JavaScript to the page
-/*$THEME->javascripts = array(
-    'jquery-1.11.2.min',
-    'custom',
-    'jquery.stellar.min'
-);*/
-
 $THEME->javascripts = array(
     'lib/modernizr-2.6.2.min'
 );
@@ -36,7 +29,8 @@ $THEME->javascripts = array(
 $THEME->javascripts_footer = array(
     'lib/jquery-1.11.2.min',
     'lib/bootstrap.min',
-    'custom',
+    'main',
+    'BaseController',
     'lib/jquery.stellar.min'
 );
 
