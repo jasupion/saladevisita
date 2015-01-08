@@ -1,7 +1,7 @@
 // scripts criado para o projeto
 (function(window, document,$){
   'use strict';        
-  var BaseController = (function(){
+  var BaseController = (function(){ 
     
     var _public = {};
 	

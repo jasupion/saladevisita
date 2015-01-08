@@ -5,8 +5,35 @@
     
     var _public = {};
 
-    _public.init = function(){
+    _public.pathSvg = function(){
+    	jQuery('img.svg').each(function(){
+	        var $img = jQuery(this),
+	        imgID = $img.attr('id'),
+	        imgClass = $img.attr('class'),
+	        imgURL = $img.attr('src');
+	    
+	        jQuery.get(imgURL, function(data) {
+	            var $svg = jQuery(data).find('svg');
+	    		
+	    		if(typeof imgID !== 'undefined') {
+	                $svg = $svg.attr('id', imgID);
+	            }
+	            
+	            if(typeof imgClass !== 'undefined') {
+	                $svg = $svg.attr('class', imgClass+' replaced-svg');
+	            }
+	    
+	            $svg = $svg.removeAttr('xmlns:a');
+	    
+	            $img.replaceWith($svg);
+	    
+	        }, 'xml');
+	    
+	    });
+    };
 
+     _public.init = function(){
+		_public.pathSvg();
     };
 
     return _public; 

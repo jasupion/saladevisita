@@ -5,6 +5,7 @@ $hasfooter = (empty($PAGE->layout_options['nofooter']));
 $hassidepre = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-pre', $OUTPUT));
 $hassidepost = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-post', $OUTPUT));
 $haslogininfo = (empty($PAGE->layout_options['nologininfo']));
+$haslogo = (empty($PAGE->theme->settings->logo)) ? false : $PAGE->theme->settings->logo;
 
 $showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT));
 $showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT));
@@ -60,16 +61,23 @@ echo $OUTPUT->doctype() ?>
         <div class="menu-anchor"></div>
           <div class="header-menu">
             <div class="login-div">
+              <a href="#" id="openButton">
+                <!-- <i class="fa fa-info-circle fa-width" id="tool"></i> -->
+                Sobre Acesso
+              </a>&nbsp;
               <?php echo $src; ?>
               <?php
                 if ($haslogininfo) {
-                    echo $OUTPUT->login_info();
+                    if(isloggedin()){
+                      echo $OUTPUT->login_info();  
+                    }else{
+                       $branchurl = new moodle_url('/login/index.php');
+                       echo "<a href=".$branchurl." class='btn btn-primary btn-login'>Login</a>";
+                    }
                 }
-                echo $PAGE->headingmenu
+                //echo $PAGE->headingmenu
               ?>
-              <a href="#" id="openButton">
-                <i class="fa fa-info-circle" id="tool" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom"></i>
-              </a>
+
             </div>
             <!--<ul>
               <li><a href="http://suporte.aticenter.com.br" target="_blank"><span class="txt-suporte">Suporte</span><span class="icon-top icon-suporte">&nbsp;</span></a></li>
@@ -77,7 +85,7 @@ echo $OUTPUT->doctype() ?>
           </div>
           <?php if ($hasheading) { ?>
            <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>">
-             <img class="img-logo" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/> 
+             <img class="img-logo svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/> 
            </a>
            <div class="logo-senai">
              <img src="<?php echo $OUTPUT->pix_url('images/logo_senai_dn', 'theme'); ?>">
