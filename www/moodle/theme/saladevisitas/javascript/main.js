@@ -32,8 +32,16 @@
 	    });
     };
 
+    _public.menuSandwich = function(){
+    	$('.menu-anchor').on('click touchstart', function(e){
+			$('html').toggleClass('menu-active');
+		  	e.preventDefault();
+		});
+    };
+
      _public.init = function(){
 		_public.pathSvg();
+		_public.menuSandwich();
     };
 
     return _public; 
@@ -45,9 +53,4 @@
 
 
 
-$(document).ready(function(){
-	$('.menu-anchor').on('click touchstart', function(e){
-		$('html').toggleClass('menu-active');
-	  	e.preventDefault();
-	});
-});   
+

@@ -94,7 +94,7 @@
     title:'Tolltip funcionsado'
   });
 
-  YUI().use('transition','panel', function (Y) {
+  /*YUI().use('transition','panel', function (Y) {
         var openBtn = Y.one('#openButton'),
             panel, bb;
 
@@ -141,7 +141,7 @@
         openBtn.on('click', function (e) {
           showModal();
         })
-  });
+  });*/
 </script>
 </body>
 </html>

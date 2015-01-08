@@ -61,10 +61,12 @@ echo $OUTPUT->doctype() ?>
         <div class="menu-anchor"></div>
           <div class="header-menu">
             <div class="login-div">
-              <a href="#" id="openButton">
-                <!-- <i class="fa fa-info-circle fa-width" id="tool"></i> -->
-                Sobre Acesso
-              </a>&nbsp;
+              <?php if(!isloggedin()): ?>
+                <a href="#" id="openButton">
+                  <!-- <i class="fa fa-info-circle fa-width" id="tool"></i> -->
+                  Sobre Acesso
+                </a>&nbsp;
+              <?php endif ?>
               <?php echo $src; ?>
               <?php
                 if ($haslogininfo) {
