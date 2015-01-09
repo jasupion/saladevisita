@@ -1,12 +1,18 @@
 <?php 
   include 'includes/header.php';
 ?>
-<?php if ($hasnavbar) { ?>
-    <div class="navbar clearfix">
-        <div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
-        <div class="navbutton"> <?php echo $PAGE->button; ?></div>
-    </div>
-<?php } ?>
+
+<div class="main-front-page">
+  <div class="front-page-logo container">
+    <img class="svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/> 
+  </div>
+  <div class="fron-page-form container">
+    <form id="coursesearch" action="http://saladevisitas.avasmanager.com.br/course/search.php" method="get">
+      <input type="text" id="shortsearchbox" size="12" name="search" alt="Buscar cursos" value="">
+    </form>
+  </div>
+</div>
+
 
 <div id="page-wrapper">
     <div id="page-content">
