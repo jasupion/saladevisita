@@ -3,14 +3,18 @@
 ?>
 
 <?php 
-  $options = coursecat::make_categories_list();
-  $cats = array();
-  foreach ($options as $id => $value) {
-      $pieces = explode("/", $value);
-      if(count($pieces) == 1){
-        $cats[$id] = $value;
-      }
-  }
+  if(isloggedin()){
+    $options = coursecat::make_categories_list();
+    $cats = array();
+    foreach ($options as $id => $value) {
+        $pieces = explode("/", $value);
+        if(count($pieces) == 1){
+          $cats[$id] = $value;
+        }
+    }
+  }else{
+    $cats = array(1=>'Cursos Técnicos',3=>'Cursos de Qualificação Técnica',4=>'Cursos em Validação');
+  }  
 ?>
 
 <div class="main-front-page">
@@ -18,7 +22,8 @@
     <img class="svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/> 
   </div>
   <div class="front-page-form container">
-    <form id="coursesearch" action="http://saladevisitas.avasmanager.com.br/course/search.php" method="get">
+    <?php  $urlSearch = new moodle_url('/course/search.php'); ?>
+    <form id="coursesearch" action="<?php echo $urlSearch; ?>" method="get">
       <input type="text" id="shortsearchbox" class="front-page-input" size="12" name="search" placeholder="Buscar cursos" value="">
     </form>
   </div>
@@ -26,7 +31,8 @@
     <div class="row front-page-box-container">
       <?php foreach ($cats as $id => $cat): ?>
       <div class="col-md-4 col-xs-6 col-sm-4">
-        <a href="">
+        <?php $urlSearchCat = new moodle_url('/course/index.php?categoryid='.$id); ?>
+        <a href="<?php echo $urlSearchCat; ?>">
           <div class="front-page-box">
               <?= $cat ?>
           </div>
