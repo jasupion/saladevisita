@@ -13,6 +13,7 @@ node_modules/
 #ignore moodle
 moodledata/
 !/www/moodle/theme/saladevisitas/
+/www/moodle/theme/saladevisitas/style/moodle.css
 /www/moodle/admin/
 /www/moodle/auth/
 /www/moodle/backup/
