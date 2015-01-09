@@ -24,7 +24,7 @@
 
 
 	_public.init = function(){
-		_public.getTopBar();
+		//_public.getTopBar();
 		//Proibir a edição de dados pessoais no editar perfil do Moodle - /moodle/user/edit.php
 		//_public.removeHtml({url:'user/edit',class:'.clearfix'});
 	};

@@ -42,6 +42,7 @@
      _public.init = function(){
 		_public.pathSvg();
 		_public.menuSandwich();
+		$(".dock_left_vertical nothingdocked").remove();
     };
 
     return _public; 
