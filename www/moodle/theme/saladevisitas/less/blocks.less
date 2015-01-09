@@ -12,6 +12,10 @@
     margin-right:4px    
 }
 
+.block .header h2{
+	font-size: 1.5em;
+}
+
 
 /* Sandwich Menu---------------*/
 
@@ -24,19 +28,11 @@
 	overflow-x: hidden;
 	cursor: pointer;
 	background: #FFF;
-    z-index: 100;
+    z-index: 110;
     float: left;
 	right: 100px;
 	top: 10px;
 
-	-webkit-transform: translateX(0px);
-	-moz-transform: translateX(0px);
-	-ms-transform: translateX(0px);
-	transform: translateX(0px);
-	-webkit-transition: all .25s linear;
-	-moz-transition: all .25s linear;
-	-ms-transition: all .25s linear;
-	transition: all .25s linear;
 }
 
 .menu-anchor:before {/*desenhando o sandwich*/
@@ -60,14 +56,9 @@
 
 .menu-active .menu-anchor {
 	background-color: #FFF;
-	-webkit-transform: translateX(280px);
-	-moz-transform: translateX(280px);
-	-ms-transform: translateX(280px);
-	transform: translateX(280px);
-	-webkit-transition: all .30s linear;
-	-moz-transition: all .30s linear;
-	-ms-transition: all .30s linear;
-	transition: all .30s linear;
+	left: 100px;
+	top: 0;
+	z-index: 110;
 	
 }
 

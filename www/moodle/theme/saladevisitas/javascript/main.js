@@ -35,8 +35,16 @@
     _public.menuSandwich = function(){
     	$('.menu-anchor').on('click touchstart', function(e){
 			$('html').toggleClass('menu-active');
+		  	$('.overlay').show();
 		  	e.preventDefault();
+
 		});
+
+		$('.overlay').on('click',function(e){
+                $('.overlay').hide();                                
+                $('html').toggleClass('menu-active');
+		  		e.preventDefault();
+            });
     };
 
      _public.init = function(){
