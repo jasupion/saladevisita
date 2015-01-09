@@ -62,7 +62,7 @@ echo $OUTPUT->doctype() ?>
           <div class="header-menu">
             <div class="login-div">
               <?php if(!isloggedin()): ?>
-                <a href="#" id="openButton">
+                <a href="#" data-toggle="modal" data-target="#modalAviso">
                   <!-- <i class="fa fa-info-circle fa-width" id="tool"></i> -->
                   Sobre Acesso
                 </a>&nbsp;
@@ -129,3 +129,24 @@ echo $OUTPUT->doctype() ?>
     </header>
 <?php } ?>
 <!-- END OF HEADER -->
+
+<div class="modal fade" id="modalAviso">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><i class="fa fa-exclamation-triangle"></i> Atenção!</h4>
+      </div>
+      <div class="modal-body">
+        <p>
+           O acesso a esse ambiente é restrito a colaboradores do SENAI que atuam no desenvolvimento e execução dos cursos 
+           a distância. Para esclarecimentos, procure o interlocutor de educação a distância do Departamento Regional 
+           do SENAI do seu Estado. 
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
