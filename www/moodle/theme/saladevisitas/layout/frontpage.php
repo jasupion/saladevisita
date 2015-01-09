@@ -1,16 +1,5 @@
-<?php
-  include 'includes/header.php';
-?>
-
 <?php 
-  $options = coursecat::make_categories_list();
-  $cats = array();
-  foreach ($options as $id => $value) {
-      $pieces = explode("/", $value);
-      if(count($pieces) == 1){
-        $cats[$id] = $value;
-      }
-  }
+  include 'includes/header.php';
 ?>
 
 <div class="main-front-page">
@@ -24,15 +13,27 @@
   </div>
   <div class="front-page-links container">
     <div class="row front-page-box-container">
-      <?php foreach ($cats as $id => $cat): ?>
       <div class="col-md-4 col-xs-6 col-sm-4">
         <a href="">
           <div class="front-page-box">
-              <?= $cat ?>
+              Cursos Técnicos
           </div>
         </a>
       </div>
-    <?php endforeach; ?>
+      <div class="col-md-4 col-xs-6 col-sm-4">
+        <a href="">
+          <div class="front-page-box">
+              Curso De Qualificação Técnica
+          </div>
+        </a>
+      </div>
+      <div class="col-md-4 col-xs-6 col-sm-4">
+        <a href="">
+          <div class="front-page-box">
+              Cursos em Validação
+          </div>
+        </a>  
+      </div>
     </div>
   </div>
 </div>
@@ -47,12 +48,12 @@
         <?php } ?>
       </div>
       <!-- Conteudo das regioes -->
-      <div id="region-main-box" >
+      <div id="region-main-box">
            <div id="region-post-box">
-              <div id="region-main-wrap" style="display:none">
+              <div id="region-main-wrap">
                  <div id="region-main-pad">
                    <div id="region-main">
-                     <div class="region-content" class="container" >
+                     <div class="region-content" class="container">
                             <?php echo $OUTPUT->main_content() ?>
                      </div>
                    </div>
@@ -91,31 +92,6 @@
 </div>
 
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
-<?php
-  
-  //define('AJAX_SCRIPT', true);
 
-  /*require_once(dirname(__dir__) . '/config.php');
-
-  if ($CFG->forcelogin) {
-      require_login();
-  }
-
-  $PAGE->set_context(context_system::instance());
-  $courserenderer = $PAGE->get_renderer('core', 'course');
-
-  echo json_encode($courserenderer->coursecat_ajax());
-*/
-
-  
-  //$options = coursecat::get_all_visible();
-  //$options = coursecat::get_courses();
-  //$coursecatcache = cache::make('core', 'coursecat');
-  //$ids = $coursecatcache->get('user'. $USER->id);
-  //echo "<pre>";
-  //var_dump($options);
-  //echo "</pre>";
-  
-?>
 </body>
 </html>
