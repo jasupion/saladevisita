@@ -71,7 +71,8 @@ echo $OUTPUT->doctype() ?>
               <?php
                 if ($haslogininfo) {
                     if(isloggedin()){
-                      echo $OUTPUT->login_info();  
+                      global $USER;
+                      //echo $OUTPUT->login_info();  
                     }else{
                        $branchurl = new moodle_url('/login/index.php');
                        echo "<a href=".$branchurl." class='btn btn-primary btn-login'>Login</a>";
@@ -79,7 +80,37 @@ echo $OUTPUT->doctype() ?>
                 }
                 //echo $PAGE->headingmenu
               ?>
-
+              <?php 
+                
+                //var_dump($USER);
+              ?>
+              <?php if(isloggedin()): ?>
+                <div class="dropdown">
+                  <a href="" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    <?php echo $USER->firstname; ?>
+                    <span class="fa-stack fa-lg">
+                      <i class="fa fa-circle-thin fa-stack-2x"></i>
+                      <i class="fa fa-user fa-stack-1x"></i>
+                    </span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation">
+                      <?php  
+                        $branchurlUser = new moodle_url('/user/profile.php?id='.$USER->id);
+                      ?>
+                      <a role="menuitem" tabindex="-1" href="<?php $branchurlUser; ?>">
+                      <i class="fa fa-cog"></i> Perfil</a>
+                    </li>
+                    <li role="presentation">
+                      <?php  
+                        $branchurlLogout = new moodle_url('/login/logout.php?sesskey='.$USER->sesskey);
+                      ?>
+                      <a role="menuitem" tabindex="-1" href="<?php echo $branchurlLogout; ?>">
+                      <i class="fa fa-times"></i> Sair</a>
+                    </li>
+                  </ul>
+                </div>
+              <?php endif ?>
             </div>
             <!--<ul>
               <li><a href="http://suporte.aticenter.com.br" target="_blank"><span class="txt-suporte">Suporte</span><span class="icon-top icon-suporte">&nbsp;</span></a></li>
