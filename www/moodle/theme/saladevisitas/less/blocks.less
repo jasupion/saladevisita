@@ -2,11 +2,7 @@
     border:none;          
 }
 
-.content {
-   padding: 0px;	 
-}
-
-.block_action {
+.block_action, .controls {
      display: none;
 }
 
@@ -16,46 +12,6 @@
     margin-right:4px    
 }
 
-.block .content .list li.listentry {
-    clear:both;
-}
-.block .content .list .c0 {
-    display:inline;
-    z-index: 100!important;	
-}
-.block .content .list .c1 {
-    margin-left:5px;
-    display:inline;
-    z-index: 100!important;	
-}
-
-.block-region {
-    float: left;
-    padding: 0;
-    font-size: 12px;    
-}
-.block-region ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-.block-region li {
-    padding: 0 0 20px 0;
-}
-.block-region li ul {
-}
-.block-region li li {
-    margin: 0 20px 0 10px;
-    padding: 8px 0px;
-}
-.block .header {
-    border:none;
-    padding: 6px 0 4px;
-    width: 100%;
-}
-.block .header div.commands {
-    margin-left: 10px;
-}
 
 /* Sandwich Menu---------------*/
 
@@ -104,10 +60,10 @@
 
 .menu-active .menu-anchor {
 	background-color: #FFF;
-	-webkit-transform: translateX(220px);
-	-moz-transform: translateX(220px);
-	-ms-transform: translateX(220px);
-	transform: translateX(220px);
+	-webkit-transform: translateX(280px);
+	-moz-transform: translateX(280px);
+	-ms-transform: translateX(280px);
+	transform: translateX(280px);
 	-webkit-transition: all .30s linear;
 	-moz-transition: all .30s linear;
 	-ms-transition: all .30s linear;
@@ -115,64 +71,47 @@
 	
 }
 
-// .menu-active .overlay{//overlay
-//      position: fixed;
-//     top: 0;
-//     left: 0;
-//     height: 100%;
-//     width: 100%;
-//     background-color: rgba(0,0,0,0.8);
-//     z-index: 50;
-// }
+.menu-active .overlay{
+     position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 50;
+}
 
 
 .nav {
 	position: fixed;
-	top: 0;
-	width: 220px;
-	height: 100%;
-	padding-top: 10px;
 	background: #fff;
-	overflow-x: hidden;
-	z-index: 100!important;	
+	color: #333;
+	display: block;
+	left: 0;	
+	top: 0;
+	width: 280px;
+	 height: 100%;
+	z-index: 100;
+	overflow-x: hidden;	
 }
 
 .menu-active .nav {		
 	-webkit-transform: translateX(0);
 	-moz-transform: translateX(0);
 	-ms-transform: translateX(0);
-	transform: translateX(0);	
-	z-index: 100!important;	
+	transform: translateX(0);		
 }
-
-.nav li a {
-	display: block;
-	border-bottom: 1px solid rgba(255,255,255,.3);
-	margin: 0 10px;
-	// padding: 10px;
-	color: #000;
-	text-decoration: none;
-	z-index: 100!important;	
-}
-
-.nav li a:hover {
-	background: #FFF;
-	color: #5180a3;
-	z-index: 100!important;	
-}
-
 
 /* 	Aqui você esconde o menu para fora da tela  O valor é exatamente a largura da sidebar */
 .nav {
-	-webkit-transform: translateX(-220px);
-	-moz-transform: translateX(-220px);
-	-ms-transform: translateX(-220px);
-	transform: translateX(-220px);
+	-webkit-transform: translateX(-280px);
+	-moz-transform: translateX(-280px);
+	-ms-transform: translateX(-280px);
+	transform: translateX(-280px);
 	-webkit-transition: all .25s linear;
 	-moz-transition: all .25s linear;
 	-ms-transition: all .25s linear;
-	transition: all .25s linear;
-	z-index: 100!important;	
+	transition: all .25s linear;	
 }
 
 
@@ -200,19 +139,20 @@ ul.dropdown span.customitem {
     border:0;
     width: 100%;
 }
-ul.dropdown span.customitem {
-    padding:0;
-    width: 100%;
+
+ul .dropdown {
+	border: 0;
 }
-ul.dropdown li a,
+
+
+ul.dropdown li a, 
 ul.dropdown span.customitem a {
     padding:6px 20px;
 }
-ul.dropdown span.customitem a:hover {
-    border: 0;
-}
+
 #custommenu ul.dropdown ul {
-    padding:0;width:185px;
+    padding:0;
+    width:185px;
 }
 #custommenu ul.dropdown ul a {
     padding:4px 0px 4px 18px;
@@ -269,9 +209,7 @@ ul.dropdown ul ul {
     top:0;
     right:auto;
     left:100%;
-    margin-top:0;
-    border-top:none;
-    border-left:none;
+    margin-top:0;    
     font-weight:400;
 }
 ul.dropdown li:hover > ul {
@@ -305,8 +243,7 @@ ul.dropdown a:link, ul.dropdown a:visited {
     color: white;
     text-decoration: none;
 }
-ul.dropdown a:hover {
-    border:0;
+ul.dropdown a:hover {    
     background-color: #fff;
     color: #036;
 }
@@ -319,24 +256,9 @@ ul.dropdown ul ul ul li {
 ul.dropdown li a,
 ul.dropdown span,
 ul.dropdown span a {
-    border: none;
     background-color: transparent;
 }
-ul.dropdown ul li a,
-ul.dropdown ul span,
-ul.dropdown ul span a {
-    border: 0;
-}
-ul.dropdown ul ul li a,
-ul.dropdown ul ul span,
-ul.dropdown ul ul span a {
-    border:0
-}
-ul.dropdown ul ul ul li a,
-ul.dropdown ul ul ul span,
-ul.dropdown ul ul ul span a {
-    border:0;
-}
+
 ul.dropdown a,ul.dropdown span{
     display:block;
 }
@@ -370,37 +292,3 @@ ul.dropdown ul ul li:hover > span a {
     background-image:url([[pix:theme|menu/ab-arrowover]]);
     color:#036;
 }
-
-
-// .wrapper {
-//         display: flex;
-//         min-height: 100%;   
-// }
-// .custommenu-checkbox {
-//         position: absolute;
-//         opacity: 0;
-// }
-// .custommenu-label {
-//         position: absolute;
-//         top: 32px;
-//         left: 32px;     
-//         z-index: 100;
-//         cursor: pointer;
-// }
-// .content {
-//     flex: 1;
-//     padding: 80px 30px;
-//     background: #eee;
-//     color: blue;
-//     // box-shadow: 0 0 5px black;
-//     transition: all .5s;
-// }
-// .sidebar {
-//     overflow-x: hidden;
-//     width: 0;
-//     height: 0;
-//     background: blue;
-//     color: #eee;
-//     transition: all .5s;
-// }
-
