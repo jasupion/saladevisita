@@ -41,7 +41,7 @@ echo $OUTPUT->doctype() ?>
 </head>
 
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>" class="yui3-skin-sam">
-
+<div class="overlay"></div>
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 <div id="topo-flutuante" class="flutuante" style="display:none;">
     <a class="logo-mini" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
