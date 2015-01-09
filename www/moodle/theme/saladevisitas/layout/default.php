@@ -3,7 +3,11 @@
 ?>
 <?php if ($hasnavbar) { ?>
     <div class="navbar clearfix">
-        <div class="breadcrumb"><?php echo $OUTPUT->navbar(); ?></div>
+        <div class="breadcrumb">
+          <div class="container">
+            <?php echo $OUTPUT->navbar(); ?>
+          </div>
+        </div>
         <div class="navbutton"> <?php echo $PAGE->button; ?></div>
     </div>
 <?php } ?>

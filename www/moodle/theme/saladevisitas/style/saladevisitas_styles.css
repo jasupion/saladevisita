@@ -375,10 +375,7 @@ Navbar & Breadcrumb
     bottom: 28px;
 
 }
-.breadcrumb {
-    float:left;
-    color: #6992A5;
-}
+
 .navbutton {
     text-align:right;
     float: right;
@@ -394,31 +391,15 @@ Navbar & Breadcrumb
     position: relative;
     bottom: 4px;
 }
-.breadcrumb ul {
-    margin-top: 5px;
-    margin-left: 10px;
-    text-indent:0;
-    list-style:none;
-    position: relative;
-    bottom: 1px;
-}
-.breadcrumb li,
+
 .navbutton div,
 .navbutton form {
     display:inline;
 }
-.logininfo
-.breadcrumb {
+.logininfo {
     font-size: 1.5em;
 }
-.breadcrumb a,
-.breadcrumb a:link,
-.breadcrumb a:visited {
-    color: #2a7ba0;
-    text-decoration: none;
-}
-.breadcrumb a:hover,
-.breadcrumb a:active { text-decoration: underline;}
+
 .jsenabled .course_category_tree .controls {
     visibility:visible;
     float: right;
