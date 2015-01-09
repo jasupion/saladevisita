@@ -6,10 +6,35 @@
   <div class="front-page-logo container">
     <img class="svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/> 
   </div>
-  <div class="fron-page-form container">
+  <div class="front-page-form container">
     <form id="coursesearch" action="http://saladevisitas.avasmanager.com.br/course/search.php" method="get">
-      <input type="text" id="shortsearchbox" size="12" name="search" alt="Buscar cursos" value="">
+      <input type="text" id="shortsearchbox" class="front-page-input" size="12" name="search" placeholder="Buscar cursos" value="">
     </form>
+  </div>
+  <div class="front-page-links container">
+    <div class="row">
+      <div class="col-md-4 col-xs-6 col-sm-4">
+        <div class="front-page-box">
+          <a href="">
+            Cursos Técnicos
+          </a>  
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-6 col-sm-4">
+        <div class="front-page-box">
+          <a href="">
+            Curso De Qualificação Técnica
+          </a>  
+        </div>
+      </div>
+      <div class="col-md-4 col-xs-6 col-sm-4">
+        <div class="front-page-box">
+          <a href="">
+            Cursos em Validação
+          </a>  
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
