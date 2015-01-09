@@ -12,27 +12,27 @@
     </form>
   </div>
   <div class="front-page-links container">
-    <div class="row">
+    <div class="row front-page-box-container">
       <div class="col-md-4 col-xs-6 col-sm-4">
-        <div class="front-page-box">
-          <a href="">
-            Cursos Técnicos
-          </a>  
-        </div>
+        <a href="">
+          <div class="front-page-box">
+              Cursos Técnicos
+          </div>
+        </a>
       </div>
       <div class="col-md-4 col-xs-6 col-sm-4">
-        <div class="front-page-box">
-          <a href="">
-            Curso De Qualificação Técnica
-          </a>  
-        </div>
+        <a href="">
+          <div class="front-page-box">
+              Curso De Qualificação Técnica
+          </div>
+        </a>
       </div>
       <div class="col-md-4 col-xs-6 col-sm-4">
-        <div class="front-page-box">
-          <a href="">
-            Cursos em Validação
-          </a>  
-        </div>
+        <a href="">
+          <div class="front-page-box">
+              Cursos em Validação
+          </div>
+        </a>  
       </div>
     </div>
   </div>

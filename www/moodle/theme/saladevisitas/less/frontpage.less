@@ -25,17 +25,37 @@
 
 	.front-page-links{
 		text-align: center;
-	}
 
-	.front-page-box{
-		background-color: darken(@color-base,22%) !important;
-		padding: 43px 0 0 0;
-		height: 160px;
-		margin-bottom: 28px;
+		.front-page-box-container{
+			margin-bottom: 20px;
+		}
+
 		a{
 			color: #fff;
 			font-size: 2em;
-			height: 50%;
+			&:hover{
+				text-decoration: none;
+				.front-page-box{
+					-webkit-transform:scale(1.1);
+					transform:scale(1.1);
+					-webkit-box-shadow: 2px 9px 10px 0px rgba(255, 255, 255, 0.79);
+					-moz-box-shadow:    2px 9px 10px 0px rgba(255, 255, 255, 0.79);
+					box-shadow:         2px 9px 10px 0px rgba(255, 255, 255, 0.79);
+				}
+			}
+		}
+
+
+
+		.front-page-box{
+			background-color: darken(@color-base,22%) !important;
+			padding: 43px 0 0 0;
+			height: 160px;
+			margin-bottom: 28px;
+			-webkit-transition: all 0.7s ease;
+			transition: all 0.7s ease;
 		}
 	}
+
+	
 }
