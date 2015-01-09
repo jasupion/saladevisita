@@ -1,23 +1,18 @@
 <!-- START OF FOOTER -->
   <?php if ($hasfooter) { ?>
-    <div  class="site-footer">
-
-        <div class="footer-left">
-
-            <?php if ($hasfootnote) { ?>
-                    <div id="footnote"><?php echo $PAGE->theme->settings->footnote;?></div>
-            <?php } ?>
-
-            <a href="http://moodle.org" title="Moodle">
-                <img width="71" height="37" src="<?php echo $OUTPUT->pix_url('footer/ico_moodle_footer','theme')?>" alt="Moodle logo" />
-            </a>
+    <footer>
+        <div class="container">
+            <div class="pull-left">
+                <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>">
+                    <img class="img-logo svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/> 
+                </a>
+            </div>
+            <div class="pull-right">
+                <div class="creditos">
+                    <a href="#">Créditos</a>
+                </div>
+            </div>
         </div>
-
-        <div class="footer-right">
-            <?php echo $OUTPUT->login_info();?>
-        </div>
-
-        <?php echo $OUTPUT->standard_footer_html(); ?>
-    </div>
+    </footer>
   <?php } ?>
   <!-- END OF FOOTER -->

@@ -45,7 +45,7 @@ gulp.task('browser-sync', function() {
 gulp.task('watch', function() {
 	gulp.watch(['less/**/*.less'], ['cmd','less']);
     gulp.watch(['layout/**/*.html'], ['cmd']);
-	gulp.watch(['layout/**/*.php'], ['cmd']);
+	gulp.watch(['layout/**/**/*.php'], ['cmd']);
 	gulp.watch(['layout/includes/**/*.php'], reload);
 	gulp.watch(['javascript/**/*.js'], ['cmd']);
 });
@@ -57,7 +57,7 @@ gulp.task('serve', function() {
 	//runSequence('copy', 'browser-sync','watch');
 	gulp.watch(['less/**/*.less'], reload);
     gulp.watch(['layout/**/*.html'], reload);
-	gulp.watch(['layout/**/*.php'], reload);
+	gulp.watch(['layout/**/**/*.php'], reload);
 	gulp.watch(['layout/includes/**/*.php'], reload);
 	gulp.watch(['javascript/**/*.js'], reload);
 });
