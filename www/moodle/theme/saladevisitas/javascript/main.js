@@ -33,18 +33,22 @@
     };
 
     _public.menuSandwich = function(){
-    	$('.menu-anchor').on('click touchstart', function(e){
-			$('html').toggleClass('menu-active');
-		  	$('.overlay').show();		  	
-		  	e.preventDefault();
+    	if($('.tree_item').length > 0){
+			$('.menu-anchor').on('click touchstart', function(e){
+					$('html').toggleClass('menu-active');
+				  	$('.overlay').show();		  	
+				  	e.preventDefault();
 
-		});
+				});	
 
-		$('.overlay').on('click',function(e){
-                $('.overlay').hide();                                
-                $('html').toggleClass('menu-active');
-		  		e.preventDefault();
-            });
+				$('.overlay').on('click',function(e){
+		                $('.overlay').hide();                                
+		                $('html').toggleClass('menu-active');
+				  		e.preventDefault();
+		            });
+		}else{
+			$('.menu-anchor').hide();
+		}
     };
 
      _public.init = function(){
