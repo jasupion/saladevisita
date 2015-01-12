@@ -61,7 +61,7 @@ echo $OUTPUT->doctype() ?>
 <?php if ($hasheading || $hasnavbar) { ?>
     <header id="page-header" >
         <div class="container">
-        <div class="menu-anchor"></div>
+        <div class="menu-anchor"><i class="fa fa-bars"></i></div>
           <div class="header-menu">
             <div class="login-div">
               <?php if(!isloggedin()): ?>
