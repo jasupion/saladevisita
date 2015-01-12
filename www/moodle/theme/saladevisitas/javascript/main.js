@@ -35,7 +35,7 @@
     _public.menuSandwich = function(){
     	$('.menu-anchor').on('click touchstart', function(e){
 			$('html').toggleClass('menu-active');
-		  	$('.overlay').show();
+		  	$('.overlay').show();		  	
 		  	e.preventDefault();
 
 		});

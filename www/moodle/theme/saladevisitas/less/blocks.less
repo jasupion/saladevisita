@@ -20,47 +20,22 @@
 /* Sandwich Menu---------------*/
 
 .menu-anchor {
-	width: 40px;
+	position:relative;
+	width: 30px;
 	height: 32px;
-	vertical-align: middle;
-	position: relative;
-	text-indent: -9999px;
-	overflow-x: hidden;
 	cursor: pointer;
-	background: #FFF;
-    z-index: 110;
     float: left;
 	right: 100px;
 	top: 10px;
-
+	right: 90px;
+	top: 10px;
 }
 
-.menu-anchor:before {/*desenhando o sandwich*/
-	content: "";
-	display: block;
-	margin: 7px auto;
-	width: 70%;
-	height: 0.25em;
-	background: #5180a3;
-	box-shadow: 0 .45em 0 0 #5180a3, 0 .9em 0 0 #5180a3;
+.fa-bars {
+	font-size: 32px;
+	color: #5180a3;	
 }
 
-.menu-anchor-remove{
-	content: "x";
-	display: block;
-	margin: 7px auto;
-	width: 70%;
-	height: 0.25em;
-	background: #5180a3;		
-}
-
-.menu-active .menu-anchor {
-	background-color: #FFF;
-	left: 100px;
-	top: 0;
-	z-index: 110;
-	
-}
 
 .menu-active .overlay{
      position: fixed;
@@ -86,12 +61,14 @@
 	overflow-x: hidden;	
 }
 
+
 .menu-active .nav {		
 	-webkit-transform: translateX(0);
 	-moz-transform: translateX(0);
 	-ms-transform: translateX(0);
 	transform: translateX(0);		
 }
+
 
 /* 	Aqui você esconde o menu para fora da tela  O valor é exatamente a largura da sidebar */
 .nav {
