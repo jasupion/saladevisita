@@ -15,6 +15,8 @@ $hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custom
 
 $hasfootnote = (!empty($PAGE->theme->settings->footnote));
 
+$regions = bootstrap_grid($hassidepre, $hassidepost);
+
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
     $bodyclasses[] = 'side-pre-only';
