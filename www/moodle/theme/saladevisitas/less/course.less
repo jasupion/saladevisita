@@ -1,11 +1,98 @@
+/*
+* Reseta css do moodle para iniciar listagem
+*/ 
+
+.coursebox {
+	margin: 0;
+}
+
+.course_category_tree .category > .info .name {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.coursebox>.info>.name {
+	margin: 0;
+}
+
+.course_category_tree .category.with_children>.info .name {
+	background-image: none !important;
+}
+.course_category_tree .category>.info .name {
+	background-image: none !important;
+}
+
+
+/*
+* Customização
+*/
+
+#page-course-index #maincontent {
+	padding-bottom: 65px;
+}
+
+.categorypicker  {
+	padding-bottom: 30px;
+}
+
 .course_category_tree {
+	.collapseexpand {
+		display: none;
+	}
 	.content {
-		a {
-			display: block;
-			//background: red;
+		h3 {
+			font-size: 16px !important;
+		}
+
+		.coursebox, .subcategories, .category {
+			padding-bottom: 3px;
+			a {
+				display: block;
+				padding: 15px;
+
+				&:hover, &:active, &:visited {
+					text-decoration: none;
+				}
+			}
+		}
+		.subcategories, .category {
+			h3 {
+				background: #f0f0f0;
+
+				&:hover {
+					background: #ccdfe8;
+				}
+			}
+			a {
+				background: url("data:image/svg+xml;charset=utf-8,<svg viewBox='0 0 60 120' xmlns='http://www.w3.org/2000/svg'><path d='m60 61.5-38.25 38.25-9.75-9.75 29.25-28.5-29.25-28.5 9.75-9.75z' fill='#868686'/></svg>") no-repeat right center;
+				background-size: 10px 20px;
+				background-origin: content-box;
+			}
+		}
+		.coursebox {
+			h3 {
+				background: #f0f0f0;
+
+				&:hover {
+					background: #ccdfe8;
+				}
+			}
+			a:before {
+				font-family: FontAwesome;
+				font-size: 16px;
+				content: "\f02d";
+				padding-right: 15px;
+				color: #666;
+			}
+			a {
+				background: #f0f0f0;
+
+				&:hover {
+					background: #ccdfe8;
+				}
+			}
 		}
 		.coursebox > .info > .name, .coursebox .content .teachers, .coursebox .content .courseimage, .coursebox .content .coursefile {
-			float: none;
 			width: 100%;
 		}
 	}
