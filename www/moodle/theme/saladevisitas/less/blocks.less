@@ -40,7 +40,7 @@
 }
 
 .fa-bars {
-	font-size: 32px;
+	font-size: 25px;
 	color: #5180a3;
 }
 
@@ -51,7 +51,7 @@
 	right: 15px;
  	
  	.fa-times{
-		font-size: 32px;
+		font-size: 25px;
 		color: #5180a3;
 	}
 }
@@ -90,14 +90,12 @@
 		background-color: rgba(0,0,0,0.8);
 		z-index: 50;
 	}
-	
 	 .nav {
 		-webkit-transform: translateX(0);
 		-moz-transform: translateX(0);
 		-ms-transform: translateX(0);
 		transform: translateX(0);
 	}
-
 }
 
 
@@ -111,44 +109,41 @@
 	background: #888;
 	margin:0;
 	z-index: 100!important;
-}
-#custommenu ul li {
-	border-right: 1px solid #777;
-	border-left: 1px solid #999
+
+	ul li {
+		border-right: 1px solid #777;
+		border-left: 1px solid #999
+	}
 }
 
 /* Dropdown Menu - CSS from DeCaf Theme by Lei Zhang -------------------------------------------------*/
-ul.dropdown span.customitem {
-	padding:0;
-	border:0;
-	width: 100%;
+ul{
+	.dropdown {
+		border: 0;
+		span.customitem {
+			padding:0;
+			border:0;
+			width: 100%;
+		}
+	}
 }
 
-ul .dropdown {
-	border: 0;
-}
-
-ul.dropdown li a,
-ul.dropdown span.customitem a {
+ul.dropdown li a, ul.dropdown span.customitem a {
 	padding:6px 20px;
 }
 
-#custommenu ul.dropdown ul {
-	padding:0;
-	width:185px;
+#custommenu {
+	ul.dropdown ul {
+		padding:0;
+		width:185px;
+		a{
+			padding:4px 0px 4px 18px;		
+			height:16px;
+		}
+	}
 }
 
-#custommenu ul.dropdown ul a {
-	padding:4px 0px 4px 18px;
-}
-
-#custommenu ul.dropdown > li span a {
-	height:16px;
-}
-
-ul.dropdown,
-ul.dropdown li,
-ul.dropdown ul {
+ul.dropdown, ul.dropdown li, ul.dropdown ul {
 	list-style:none;
 	margin:0;
 	padding:0;
@@ -160,33 +155,32 @@ ul.dropdown {
 	z-index:597;
 	float:left;
 	font:13px "Trebuchet MS",Arial,Helvetica,sans-serif;
+	li {
+		float:left;
+		line-height:1.3em;
+		vertical-align:middle;
+		background-color:transparent;
+		color:#fff;
+		zoom:1 !important;
+	}	
+
+	ul {
+		visibility:hidden;
+		position:absolute;
+		top:100%;z-index:598;
+		left:auto;
+		right:0;
+		margin-top: -1px;
+		font:100% "Trebuchet MS",Arial,Helvetica,sans-serif;
+	}	
 }
 
-ul.dropdown li {
-	float:left;
-	line-height:1.3em;
-	vertical-align:middle;
-	background-color:transparent;
-	color:#fff;
-	zoom:1 !important;
-}
-
-ul.dropdown li.hover,
-ul.dropdown li:hover {
+ul.dropdown li.hover, ul.dropdown li:hover {
 	position:relative;
 	z-index:599;
 	cursor:default;
 }
 
-ul.dropdown ul {
-	visibility:hidden;
-	position:absolute;
-	top:100%;z-index:598;
-	left:auto;
-	right:0;
-	margin-top: -1px;
-	font:100% "Trebuchet MS",Arial,Helvetica,sans-serif;
-}
 
 ul.dropdown ul li {
 	float:none;
@@ -203,10 +197,6 @@ ul.dropdown ul ul {
 	left:100%;
 	margin-top:0;
 	font-weight:400;
-}
-
-ul.dropdown li:hover > ul {
-	
 }
 
 ul.dropdown span,
