@@ -1,30 +1,38 @@
-.block {    
-    border:none;          
-}
+.block {
+	border:none;
+	padding: 0;	
+	.content{
+		.userpicture {
+			width:16px;
+			height:16px;
+			margin-right:4px
+		}
+	}
+	
+	.header h2{
+		font-size: 1.5em;
+	}
 
-.block_action, .controls {
-     display: none;
-}
+	.block_action, .controls {
+		display: none;
+	}
 
-.block .content .userpicture {
-    width:16px;
-    height:16px;
-    margin-right:4px    
-}
+	hr {
+		margin: 10px;
+		border: 0;
+		border-top: 1px solid #bbb;
+	}
 
-.block .header h2{
-	font-size: 1.5em;
 }
 
 
 /* Sandwich Menu---------------*/
-
 .menu-anchor {
 	position:relative;
 	width: 30px;
 	height: 32px;
 	cursor: pointer;
-    float: left;
+	float: left;
 	right: 100px;
 	top: 10px;
 	right: 90px;
@@ -33,7 +41,7 @@
 
 .fa-bars {
 	font-size: 32px;
-	color: #5180a3;	
+	color: #5180a3;
 }
 
 .menu-close {
@@ -41,21 +49,11 @@
 	position: relative;
 	float: right;
 	right: 15px;
-}
-
-.menu-close .fa-times{
-	font-size: 32px;
-	color: #5180a3;		
-}
-
-.menu-active .overlay{
-     position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.8);
-    z-index: 50;
+ 	
+ 	.fa-times{
+		font-size: 32px;
+		color: #5180a3;
+	}
 }
 
 
@@ -64,25 +62,14 @@
 	background: #fff;
 	color: #333;
 	display: block;
-	left: 0;	
+	left: 0;
 	top: 0;
 	width: 280px;
-	 height: 100%;
+	height: 100%;
 	z-index: 100;
-	overflow-x: hidden;	
-}
+	overflow-x: hidden;
 
 
-.menu-active .nav {		
-	-webkit-transform: translateX(0);
-	-moz-transform: translateX(0);
-	-ms-transform: translateX(0);
-	transform: translateX(0);		
-}
-
-
-/* 	Aqui você esconde o menu para fora da tela  O valor é exatamente a largura da sidebar */
-.nav {
 	-webkit-transform: translateX(-280px);
 	-moz-transform: translateX(-280px);
 	-ms-transform: translateX(-280px);
@@ -90,184 +77,223 @@
 	-webkit-transition: all .25s linear;
 	-moz-transition: all .25s linear;
 	-ms-transition: all .25s linear;
-	transition: all .25s linear;	
+	transition: all .25s linear;
+}
+
+.menu-active {
+	.overlay{
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0,0,0,0.8);
+		z-index: 50;
+	}
+	
+	 .nav {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		transform: translateX(0);
+	}
+
 }
 
 
 /* Custom Menu -------------------------- */
-
 #custommenu {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    clear:both;
-    height: 30px;
-    background: #888;
-    margin:0;
-    z-index: 100!important;	
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	clear:both;
+	height: 30px;
+	background: #888;
+	margin:0;
+	z-index: 100!important;
 }
 #custommenu ul li {
-    border-right: 1px solid #777;
-    border-left: 1px solid #999
+	border-right: 1px solid #777;
+	border-left: 1px solid #999
 }
-
 
 /* Dropdown Menu - CSS from DeCaf Theme by Lei Zhang -------------------------------------------------*/
 ul.dropdown span.customitem {
-    padding:0;
-    border:0;
-    width: 100%;
+	padding:0;
+	border:0;
+	width: 100%;
 }
 
 ul .dropdown {
 	border: 0;
 }
 
-
-ul.dropdown li a, 
+ul.dropdown li a,
 ul.dropdown span.customitem a {
-    padding:6px 20px;
+	padding:6px 20px;
 }
 
 #custommenu ul.dropdown ul {
-    padding:0;
-    width:185px;
+	padding:0;
+	width:185px;
 }
+
 #custommenu ul.dropdown ul a {
-    padding:4px 0px 4px 18px;
+	padding:4px 0px 4px 18px;
 }
+
 #custommenu ul.dropdown > li span a {
-    height:16px;
+	height:16px;
 }
+
 ul.dropdown,
 ul.dropdown li,
 ul.dropdown ul {
-    list-style:none;
-    margin:0;
-    padding:0;
+	list-style:none;
+	margin:0;
+	padding:0;
 }
+
 ul.dropdown {
-    position:relative;
-    top:0px;
-    z-index:597;
-    float:left;
-    font:13px "Trebuchet MS",Arial,Helvetica,sans-serif;
+	position:relative;
+	top:0px;
+	z-index:597;
+	float:left;
+	font:13px "Trebuchet MS",Arial,Helvetica,sans-serif;
 }
+
 ul.dropdown li {
-    float:left;
-    line-height:1.3em;
-    vertical-align:middle;
-    background-color:transparent;
-    color:#fff;
-    zoom:1 !important;
+	float:left;
+	line-height:1.3em;
+	vertical-align:middle;
+	background-color:transparent;
+	color:#fff;
+	zoom:1 !important;
 }
+
 ul.dropdown li.hover,
 ul.dropdown li:hover {
-    position:relative;
-    z-index:599;
-    cursor:default;
+	position:relative;
+	z-index:599;
+	cursor:default;
 }
+
 ul.dropdown ul {
-    visibility:hidden;
-    position:absolute;
-    top:100%;z-index:598;
-    left:auto;
-    right:0;
-    margin-top: -1px;
-    font:100% "Trebuchet MS",Arial,Helvetica,sans-serif;
+	visibility:hidden;
+	position:absolute;
+	top:100%;z-index:598;
+	left:auto;
+	right:0;
+	margin-top: -1px;
+	font:100% "Trebuchet MS",Arial,Helvetica,sans-serif;
 }
+
 ul.dropdown ul li {
-    float:none;
-    background-color: #34637f;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #477C9B #34637f #295770;
-    padding:0;
+	float:none;
+	background-color: #34637f;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #477C9B #34637f #295770;
+	padding:0;
 }
+
 ul.dropdown ul ul {
-    top:0;
-    right:auto;
-    left:100%;
-    margin-top:0;    
-    font-weight:400;
+	top:0;
+	right:auto;
+	left:100%;
+	margin-top:0;
+	font-weight:400;
 }
+
 ul.dropdown li:hover > ul {
-    visibility:visible;
+	
 }
+
 ul.dropdown span,
 ul.dropdown span a,
 ul.dropdown li.clickable-with-children > a {
-  background-color: #34637f;
-    width:145px;
-    padding:2px 6px 4px 20px;
-    color: #fff;
+	background-color: #34637f;
+	width:145px;
+	padding:2px 6px 4px 20px;
+	color: #fff;
 }
+
 ul.dropdown ul span,
 ul.dropdown ul span a,
 ul.dropdown ul li.clickable-with-children > a {
-    background: #34637f url([[pix:theme|menu/nav-arrow-right]]);
-    background-position:100% 50%;
-    background-repeat:no-repeat;
-    color: #fff;
+	background: #34637f url([[pix:theme|menu/nav-arrow-right]]);
+	background-position:100% 50%;
+	background-repeat:no-repeat;
+	color: #fff;
 }
+
 ul.dropdown ul ul span,
 ul.dropdown ul ul span a,
 ul.dropdown ul ul li.clickable-with-children > a {
-    background-image: #34637f url([[pix:theme|menu/nav-arrow-right]]);
-    background-position:100% 50%;
-    background-repeat:no-repeat;
-    color: #fff;
+	background-image: #34637f url([[pix:theme|menu/nav-arrow-right]]);
+	background-position:100% 50%;
+	background-repeat:no-repeat;
+	color: #fff;
 }
+
 ul.dropdown a:link, ul.dropdown a:visited {
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
-ul.dropdown a:hover {    
-    background-color: #fff;
-    color: #036;
+
+ul.dropdown a:hover {
+	background-color: #fff;
+	color: #036;
 }
 ul.dropdown ul ul li {
-    background-color: #34637f;
+	background-color: #34637f;
 }
 ul.dropdown ul ul ul li {
-    background-color: #34637f;
+	background-color: #34637f;
 }
 ul.dropdown li a,
 ul.dropdown span,
 ul.dropdown span a {
-    background-color: transparent;
+	background-color: transparent;
 }
 
+
 ul.dropdown a,ul.dropdown span{
-    display:block;
+	display:block;
 }
+
 ul.dropdown ul a {
-    width:166px;
-    padding:2px 0 4px 5px;
+	width:166px;
+	padding:2px 0 4px 5px;
 }
+
 ul.dropdown ul a.open:hover {
-    background-color: #fff;
-    color:#036;
+	background-color: #fff;
+	color:#036;
 }
+
 ul.dropdown ul li:hover > span,
 ul.dropdown ul li:hover > span a {
-    background-color:#fff;
-    background-image:url([[pix:theme|menu/ab-arrowover]]);
-    color: #036;
+	background-color:#fff;
+	background-image:url([[pix:theme|menu/ab-arrowover]]);
+	color: #036;
 }
+
 ul.dropdown li.clickable-with-children:hover > a {
-    background-image:url([[pix:theme|menu/ab-arrowover]]);
+	background-image:url([[pix:theme|menu/ab-arrowover]]);
 }
+
 ul.dropdown *.open,
 ul.dropdown li:hover > span,
 ul.dropdown li:hover > span a {
-    background-color:#fff;
-    color: #036;
+	background-color:#fff;
+	color: #036;
 }
+
 ul.dropdown ul ul *.open,
 ul.dropdown ul ul li:hover > span,
 ul.dropdown ul ul li:hover > span a {
-    background-color:#fff;
-    background-image:url([[pix:theme|menu/ab-arrowover]]);
-    color:#036;
+	background-color:#fff;
+	background-image:url([[pix:theme|menu/ab-arrowover]]);
+	color:#036;	
 }
