@@ -9,7 +9,15 @@
             </div>
             <div class="pull-right">
                 <div class="creditos">
-                    <a href="#">Créditos</a>
+                    <a href="#openCreditos">Créditos</a>
+                </div>
+                <div id="openCreditos" class="modalDialog">
+                    <div>
+                        <div class="bt-close">
+                            <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>    
+                        </div>                        
+                        <p>Desenvolvido pela Área de Software - SENAI Cimatec</p>
+                    </div>
                 </div>
             </div>
         </div>
