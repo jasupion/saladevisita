@@ -24,13 +24,8 @@ gulp.task('deploy', function() {
 		exclude: ["./node_modules"],
 		args: ['--verbose']
 	}, function(error, stdout, stderr, cmd) {
-		if (error) {
-			console.log(error.message);
-		} else {
-			console.log(stdout);
-			console.log("Sincronização realizada!");
-		}
-		
+		console.log(stdout);
+		console.log("Sincronização realizada!");		
 	});
 });
 
