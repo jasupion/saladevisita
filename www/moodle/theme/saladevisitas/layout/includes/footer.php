@@ -19,7 +19,8 @@
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
-            </button>           
+            </button>
+            <h4 class="modal-title">Créditos!</h4>           
           </div>
           <div class="modal-body">
             <p> Desenvolvido pela Área de Software - SENAI Cimatec. </p>
