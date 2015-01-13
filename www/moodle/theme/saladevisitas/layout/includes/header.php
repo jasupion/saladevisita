@@ -101,7 +101,7 @@ echo $OUTPUT->doctype() ?>
                       <?php  
                         $branchurlUser = new moodle_url('/user/profile.php?id='.$USER->id);
                       ?>
-                      <a role="menuitem" tabindex="-1" href="<?php $branchurlUser; ?>">
+                      <a role="menuitem" tabindex="-1" href="<?php echo $branchurlUser; ?>">
                       <i class="fa fa-cog"></i> Perfil</a>
                     </li>
                     <li role="presentation">
