@@ -1,7 +1,9 @@
 <?php 
   include 'includes/header.php';
 ?>
-<h1>Funcionou</h1>
+<div class="coursebox-title">
+  <h2>Cursos</h2>  
+</div>
 <?php  
   include 'includes/breadcrumb.php';
 ?>
