@@ -1,4 +1,4 @@
-<!-- START OF FOOTER -->
+<!--START OF FOOTER -->
   <?php if ($hasfooter) { ?>
     <footer>
         <div class="container">
@@ -8,19 +8,28 @@
                 </a>
             </div>
             <div class="pull-right">
-                <div class="creditos">
-                    <a href="#openCreditos">Créditos</a>
-                </div>
-                <div id="openCreditos" class="modalDialog">
-                    <div>
-                        <div class="bt-close">
-                            <a href="#close" title="Close" class="close"><i class="fa fa-times"></i></a>    
-                        </div>                        
-                        <p>Desenvolvido pela Área de Software - SENAI Cimatec</p>
-                    </div>
-                </div>
+                <a href="#" data-toggle="modal" data-target="#modalCreditos"> Créditos </a>
             </div>
-        </div>
     </footer>
+
+    <!-- Modal de créditos -->
+    <div class="modal fade" id="modalCreditos">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>           
+          </div>
+          <div class="modal-body">
+            <p> Desenvolvido pela Área de Software - SENAI Cimatec. </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
   <?php } ?>
-  <!-- END OF FOOTER -->
+  <!-- END OF FOOTER
