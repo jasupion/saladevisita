@@ -3,18 +3,8 @@
 ?>
 
 <?php 
-  if(isloggedin()){
-    $options = coursecat::make_categories_list();
-    $cats = array();
-    foreach ($options as $id => $value) {
-        $pieces = explode("/", $value);
-        if(count($pieces) == 1){
-          $cats[$id] = $value;
-        }
-    }
-  }else{
-    $cats = array(1=>'Cursos Técnicos',3=>'Cursos de Qualificação Técnica',4=>'Cursos em Validação');
-  }  
+  global $DB;
+  $course = $DB->get_records_sql('SELECT id, name FROM mdl_course_categories WHERE parent = 0', array('parent'=> 0));
 ?>
 
 <div class="main-front-page">
@@ -34,12 +24,12 @@
   </div>
   <div class="front-page-links container">
     <div class="row front-page-box-container">
-      <?php foreach ($cats as $id => $cat): ?>
+      <?php foreach ($course as $obj): ?>
       <div class="col-md-4 col-xs-6 col-sm-4">
-        <?php $urlSearchCat = new moodle_url('/course/index.php?categoryid='.$id); ?>
+        <?php $urlSearchCat = new moodle_url('/course/index.php?categoryid='.$obj->id); ?>
         <a href="<?php echo $urlSearchCat; ?>">
           <div class="front-page-box">
-              <?= $cat ?>
+              <?= $obj->name ?>
           </div>
         </a>
       </div>
