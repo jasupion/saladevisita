@@ -1,11 +1,10 @@
 <?php 
   include 'includes/header.php';
 ?>
-
+<h1>Funcionou</h1>
 <?php  
   include 'includes/breadcrumb.php';
 ?>
-<h1>Funcionou</h1>
 <div id="page" class="container">
   <div id="page-content" class="row">
     <div id="region-main" class="<?php //echo $regions['content']; ?>"> 
