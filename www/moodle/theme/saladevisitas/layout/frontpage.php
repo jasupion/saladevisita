@@ -21,6 +21,11 @@
   <div class="front-page-logo container">
     <img class="svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/> 
   </div>
+  <div class="container front-page-desc">
+    <p>
+      Ambiente para demonstração dos cursos a distância com padronização educacional que são oferecidos pelo SENAI  
+    </p>
+  </div>
   <div class="front-page-form container">
     <?php  $urlSearch = new moodle_url('/course/search.php'); ?>
     <form id="coursesearch" action="<?php echo $urlSearch; ?>" method="get">
