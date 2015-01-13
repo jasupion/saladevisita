@@ -56,7 +56,7 @@ $THEME->layouts = array(
     ),
     // Main course page
     'course' => array(
-        'file' => 'default.php',
+        'file' => 'cursos.php',
         'regions' => array('side-pre', 'side-post'),
         'defaultregion' => 'side-post',
         'options' => array('langmenu'=>true),

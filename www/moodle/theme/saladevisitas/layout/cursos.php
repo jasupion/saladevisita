@@ -5,11 +5,12 @@
 <?php  
   include 'includes/breadcrumb.php';
 ?>
- 
+<h1>Funcionou</h1>
 <div id="page" class="container">
   <div id="page-content" class="row">
     <div id="region-main" class="<?php //echo $regions['content']; ?>"> 
       <div class="navbutton"> <?php echo $PAGE->button; ?></div>
+      
       <?php
         echo $OUTPUT->course_content_header();
         echo $OUTPUT->main_content();
