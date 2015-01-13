@@ -1,10 +1,6 @@
 <?php 
   include 'includes/header.php';
-?>
-<div class="coursebox-title">
-  <h2>Cursos</h2>  
-</div>
-<?php  
+
   include 'includes/breadcrumb.php';
 ?>
  
