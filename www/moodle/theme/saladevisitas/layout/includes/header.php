@@ -70,7 +70,7 @@ echo $OUTPUT->doctype() ?>
                   Sobre Acesso
                 </a>&nbsp;
               <?php endif ?>
-              <?php echo $src; ?>
+              <?php //echo $src; ?>
               <?php
                 if ($haslogininfo) {
                     if(isloggedin()){

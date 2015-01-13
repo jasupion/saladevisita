@@ -1,6 +1,5 @@
 <?php 
   include 'includes/header.php';
-
   include 'includes/breadcrumb.php';
 ?>
  
@@ -16,14 +15,11 @@
     </div>
   </div>
 </div>
-
 <?php 
   include 'includes/menu.php';
-
   include 'includes/footer.php';
+  echo $OUTPUT->standard_end_of_body_html(); 
 ?>
-
-<?php echo $OUTPUT->standard_end_of_body_html() ?>
 
 </body>
 </html>

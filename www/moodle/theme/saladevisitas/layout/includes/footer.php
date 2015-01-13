@@ -10,6 +10,7 @@
             <div class="pull-right">
                 <a href="#" data-toggle="modal" data-target="#modalCreditos"> Créditos </a>
             </div>
+          </div>  
     </footer>
 
     <!-- Modal de créditos -->
@@ -36,4 +37,4 @@
     </div><!-- /.modal -->
 
   <?php } ?>
-  <!-- END OF FOOTER
+  <!-- END OF FOOTER -->

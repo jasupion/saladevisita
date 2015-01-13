@@ -1,8 +1,6 @@
 <?php
   include 'includes/header.php';
-?>
 
-<?php 
   global $DB;
   $course = $DB->get_records_sql('SELECT id, name FROM mdl_course_categories WHERE parent = 0', array('parent'=> 0));
 ?>
