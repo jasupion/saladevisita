@@ -9,9 +9,30 @@ var less = require('gulp-less');
 var runSequence = require('run-sequence');
 var path = require('path');
 var shell = require('gulp-shell');
+var rsync = require('rsyncwrapper').rsync;
 
 // load plugins
 var $ = require('gulp-load-plugins')();
+
+gulp.task('deploy', function() {
+	rsync({
+		shh: true,
+		src: './',
+		dest: 'thiagoleite@10.1.0.124:/var/www/saladevisitas/theme/saladevisitas',
+		recursive: true,
+		syncDest: true,
+		exclude: ["./node_modules"],
+		args: ['--verbose']
+	}, function(error, stdout, stderr, cmd) {
+		if (error) {
+			console.log(error.message);
+		} else {
+			console.log(stdout);
+			console.log("Sincronização realizada!");
+		}
+		
+	});
+});
 
 //var configfile = path.join( path.dirname(path.dirname(__dirname)), 'config.php');
 

@@ -23,7 +23,10 @@
             <h4 class="modal-title">Créditos!</h4>           
           </div>
           <div class="modal-body">
-            <p> Desenvolvido pela Área de Software - SENAI Cimatec. </p>
+            <div style="width: 123px; float:left; margin-right:26px;"><img class="img-logo svg" src="<?php echo $OUTPUT->pix_url('images/logo_senai', 'theme'); ?>"/></div>
+            <div style="width: 55px; float: left; margin-right: 26px;"><img class="img-logo svg" src="<?php echo $OUTPUT->pix_url('images/logo_ads', 'theme'); ?>"/></div>
+            <div style="padding-top: 16px;"><p> Desenvolvido pela Área de Software - SENAI Cimatec. </p></div>
+            <div style="clear: both;"></div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
