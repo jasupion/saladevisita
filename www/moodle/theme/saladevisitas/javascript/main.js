@@ -33,7 +33,7 @@
     };
 
     _public.menuSandwich = function(){
-    	if($('.tree_item').length > 0){
+    	// if($('.tree_item').length > 0){
 			$('.menu-anchor').on('click touchstart', function(e){
 					$('html').toggleClass('menu-active');
 				  	$('.overlay').show();		  	
@@ -46,15 +46,17 @@
 		                $('html').toggleClass('menu-active');
 				  		e.preventDefault();
 		            });
-		}else{
-			$('.menu-anchor').hide();
-		}
+		// }else{
+		// 	$('.menu-anchor').hide();
+		// } 
     };
 
      _public.init = function(){
 		_public.pathSvg();
 		_public.menuSandwich();
 		$(".dock_left_vertical nothingdocked").remove();
+		//Esta linha está sendo colocada devido a um problema com a classe hidden nos fieldset
+		$("fieldset").removeClass("hidden");
     };
 
     return _public; 
