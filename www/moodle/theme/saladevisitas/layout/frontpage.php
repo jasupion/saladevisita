@@ -7,11 +7,12 @@
 
 <div class="main-front-page">
   <div class="front-page-logo container">
-    <img class="svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/> 
+    <img class="svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/>
   </div>
   <div class="container front-page-desc">
     <p>
-      Ambiente para demonstração dos cursos a distância com padronização educacional que são oferecidos pelo SENAI  
+      Bem vindo a Sala de Visitas do Programa SENAI de Educação a Distância.
+      Este ambiente foi concebido para ser uma vitrine dos materiais on-line desenvolvidos para os cursos técnicos e de qualificação profissional de padrão nacional do SENAI.
     </p>
   </div>
   <div class="front-page-form container">
@@ -59,18 +60,18 @@
                </div>
 
                 <?php if ($hassidepre) { ?>
-                <div id="region-pre" class="block-region">                    
+                <div id="region-pre" class="block-region">
                       <div class="nav">
                       <div class="menu-anchor menu-close"><i class="fa fa-times"></i></div>
                          <div class="region-content">
                               <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
-                              <?php 
-                                if ($hassidepost) { 
+                              <?php
+                                if ($hassidepost) {
                                   echo $OUTPUT->blocks_for_region('side-post');
                                 }
                               ?>
                          </div>
-                      </div>                   
+                      </div>
                 </div>
                 <?php } ?>
 
@@ -83,7 +84,7 @@
                 <?php //} ?>
             </div>
         </div>
-        <?php 
+        <?php
           include 'includes/footer.php';
         ?>
 
@@ -92,7 +93,7 @@
 
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
 <?php
-  
+
   //define('AJAX_SCRIPT', true);
 
   /*require_once(dirname(__dir__) . '/config.php');
@@ -107,7 +108,7 @@
   echo json_encode($courserenderer->coursecat_ajax());
 */
 
-  
+
   //$options = coursecat::get_all_visible();
   //$options = coursecat::get_courses();
   //$coursecatcache = cache::make('core', 'coursecat');
@@ -115,7 +116,7 @@
   //echo "<pre>";
   //var_dump($options);
   //echo "</pre>";
-  
+
 ?>
 </body>
 </html>
