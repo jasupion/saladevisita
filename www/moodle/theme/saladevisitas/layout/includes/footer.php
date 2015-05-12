@@ -9,7 +9,7 @@
             </div>
             <div class="pull-right">
                 <a href="#" data-toggle="modal" data-target="#modalCreditos"> Créditos </a>
-                <a href="#" data-toggle="modal" data-target="#modalAjuda"> Ajuda </a>
+                <a href="#" data-toggle="modal" data-target="#modalAjuda" class="ajuda">Ajuda</a>
             </div>
           </div>
     </footer>
