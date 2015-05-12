@@ -48,7 +48,7 @@ echo $OUTPUT->doctype() ?>
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 <div id="topo-flutuante" class="flutuante" style="display:none;">
     <a class="logo-mini" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>"></a>
-    <div id="flutuante-content"></div> 
+    <div id="flutuante-content"></div>
     <div id="flutuante-user"></div>
 </div>
 <!--
@@ -75,7 +75,7 @@ echo $OUTPUT->doctype() ?>
                 if ($haslogininfo) {
                     if(isloggedin()){
                       global $USER;
-                      //echo $OUTPUT->login_info();  
+                      //echo $OUTPUT->login_info();
                     }else{
                        $branchurl = new moodle_url('/login/index.php');
                        echo "<a href=".$branchurl." class='btn btn-primary btn-login'>Login</a>";
@@ -83,8 +83,8 @@ echo $OUTPUT->doctype() ?>
                 }
                 //echo $PAGE->headingmenu
               ?>
-              <?php 
-                
+              <?php
+
                 //var_dump($USER);
               ?>
               <?php if(isloggedin()): ?>
@@ -98,14 +98,14 @@ echo $OUTPUT->doctype() ?>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
                     <li role="presentation">
-                      <?php  
+                      <?php
                         $branchurlUser = new moodle_url('/user/profile.php?id='.$USER->id);
                       ?>
                       <a role="menuitem" tabindex="-1" href="<?php echo $branchurlUser; ?>">
                       <i class="fa fa-cog"></i> Perfil</a>
                     </li>
                     <li role="presentation">
-                      <?php  
+                      <?php
                         $branchurlLogout = new moodle_url('/login/logout.php?sesskey='.$USER->sesskey);
                       ?>
                       <a role="menuitem" tabindex="-1" href="<?php echo $branchurlLogout; ?>">
@@ -121,14 +121,18 @@ echo $OUTPUT->doctype() ?>
           </div>
           <?php if ($hasheading) { ?>
            <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>">
-             <img class="img-logo svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/> 
+             <img class="img-logo svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/>
            </a>
            <div class="logo-senai">
              <img src="<?php echo $OUTPUT->pix_url('images/logo_senai_dn', 'theme'); ?>">
            </div>
           <?php } ?>
+          <div class="header-titulo">
+            <h3 class="titulo">Programa SENAI de Educação a Distância</h3>
+          </div>
         </div>
-        
+
+
     </header>
 <?php } ?>
 <!-- END OF HEADER -->
@@ -142,9 +146,9 @@ echo $OUTPUT->doctype() ?>
       </div>
       <div class="modal-body">
         <p>
-           O acesso a esse ambiente é restrito a colaboradores do SENAI que atuam no desenvolvimento e execução dos cursos 
-           a distância. Para esclarecimentos, procure o interlocutor de educação a distância do Departamento Regional 
-           do SENAI do seu Estado. 
+           O acesso a esse ambiente é restrito a colaboradores do SENAI que atuam no desenvolvimento e execução dos cursos
+           a distância. Para esclarecimentos, procure o interlocutor de educação a distância do Departamento Regional
+           do SENAI do seu Estado.
         </p>
       </div>
       <div class="modal-footer">
