@@ -128,7 +128,7 @@ echo $OUTPUT->doctype() ?>
            </div>
           <?php } ?>
           <div class="header-titulo">
-            <h3 class="titulo">Programa SENAI de Educação a Distância</h3>
+            <h4 class="titulo">Programa SENAI de Educação a Distância</h4>
           </div>
         </div>
 
