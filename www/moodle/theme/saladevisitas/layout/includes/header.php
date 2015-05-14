@@ -62,6 +62,22 @@ echo $OUTPUT->doctype() ?>
     <header id="page-header" >
         <div class="container">
         <div class="menu-anchor"><i class="fa fa-bars"></i></div>
+            
+            <?php if ($hasheading) { ?>
+           <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>">
+             <img class="img-logo svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/>
+           </a>
+           <div class="logo-senai">
+             <img src="<?php echo $OUTPUT->pix_url('images/logo_senai_dn', 'theme'); ?>">
+           </div>
+          <?php } ?>
+            
+            
+             <div class="header-titulo">
+            <h4 class="titulo">Programa SENAI de Educação a Distância</h4>
+          </div>
+            
+            
           <div class="header-menu">
             <div class="login-div">
               <?php if(!isloggedin()): ?>
@@ -119,17 +135,10 @@ echo $OUTPUT->doctype() ?>
               <li><a href="http://suporte.aticenter.com.br" target="_blank"><span class="txt-suporte">Suporte</span><span class="icon-top icon-suporte">&nbsp;</span></a></li>
             </ul>-->
           </div>
-          <?php if ($hasheading) { ?>
-           <a class="logo" href="<?php echo $CFG->wwwroot; ?>" title="<?php print_string('home'); ?>">
-             <img class="img-logo svg" src="<?php echo $OUTPUT->pix_url('images/logo_sala_de_visitas', 'theme'); ?>"/>
-           </a>
-           <div class="logo-senai">
-             <img src="<?php echo $OUTPUT->pix_url('images/logo_senai_dn', 'theme'); ?>">
-           </div>
-          <?php } ?>
-          <div class="header-titulo">
-            <h4 class="titulo">Programa SENAI de Educação a Distância</h4>
-          </div>
+          
+            
+            
+         
         </div>
 
 
