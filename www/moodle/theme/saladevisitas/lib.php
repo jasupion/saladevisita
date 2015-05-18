@@ -2,14 +2,14 @@
 //função criada para fazer o atalho para enxergar a pasta fonts pelo servidor
 function theme_essential_set_fontwww($css) {
     global $CFG;
-    //$fontwww = preg_replace("(https?:)", "", $CFG->wwwroot . '/theme/saladevisitas/fonts/');
-    //$fontwww = $CFG->wwwroot . '/theme/saladevisitas/fonts/';
-    $str = explode("/",$CFG->wwwroot);
-    $fontwww = ($str[3] == 'moodle')? '/moodle/theme/saladevisitas/fonts/' : '/theme/saladevisitas/fonts/';
+    $fontwww = preg_replace("(https?:)", "", $CFG->wwwroot . '/theme/saladevisitas/fonts/');
+    $fontwww = $CFG->wwwroot . '/theme/saladevisitas/fonts/';
+    // $str = explode("/",$CFG->wwwroot);
+    // $fontwww = ($str[3] == 'moodle')? '/moodle/theme/saladevisitas/fonts/' : '/theme/saladevisitas/fonts/';
     $tag = '[[setting:fontwww]]';
-    
+
     $css = str_replace($tag, $fontwww, $css);
-   
+
     return $css;
 }
 
@@ -78,7 +78,7 @@ function bootstrap_grid($hassidepre, $hassidepost) {
         $regions['pre'] = 'empty';
         $regions['post'] = 'empty';
     }
-    
+
     if ('rtl' === get_string('thisdirection', 'langconfig')) {
         if ($hassidepre && $hassidepost) {
             $regions['pre'] = 'col-sm-3  col-sm-push-3 col-lg-2 col-lg-push-2';
